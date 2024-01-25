@@ -10,11 +10,13 @@ import awaitsData from "@const/data/tyumenTobolsk/awaits"
 import themesData from "@const/data/tyumenTobolsk/themes"
 import invitesData from "@const/data/tyumenTobolsk/invites"
 import programData from "@const/data/tyumenTobolsk/program"
+import costData from "@const/data/tyumenTobolsk/cost"
 import Awaits from "@Components/Sections/Awaits";
 import Themes from "@Components/Sections/Themes";
 import Invites from "@Components/Sections/Invites";
 import Program from "@Components/Sections/Program";
 import Footer from "@Components/Footer";
+import Cost from "@Components/Sections/Cost";
 // import {useTheme} from "@mui/material";
 
 const TyumenTobolsk: FC = () => {
@@ -40,6 +42,7 @@ const TyumenTobolsk: FC = () => {
         <Themes items={themesData}/>
         <Invites items={invitesData}/>
         <Program items={programData}/>
+        <Cost price={costData.price} desc={costData.desc} href={costData.href}/>
       </Container>
       <Footer/>
     </>
