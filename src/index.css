@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Raleway';
+  src: local('RalewayRegular'),
+  url('./assets/fonts/RalewayRegular.woff2') format('woff2'),
+  url('./assets/fonts/RalewayRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('RalewayMedium'),
+  url('./assets/fonts/RalewayMedium.woff2') format('woff2'),
+  url('./assets/fonts/RalewayMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('RalewaySemiBold'),
+  url('./assets/fonts/RalewaySemiBold.woff2') format('woff2'),
+  url('./assets/fonts/RalewaySemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('RalewayBold'),
+  url('./assets/fonts/RalewayBold.woff2') format('woff2'),
+  url('./assets/fonts/RalewayBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('RalewayExtraBold'),
+  url('./assets/fonts/RalewayExtraBold.woff2') format('woff2'),
+  url('./assets/fonts/RalewayExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: local('RalewayBlack'),
+  url('./assets/fonts/RalewayBlack.woff2') format('woff2'),
+  url('./assets/fonts/RalewayBlack.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
