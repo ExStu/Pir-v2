@@ -13,6 +13,7 @@ import programData from "@const/data/tyumenTobolsk/program"
 import costData from "@const/data/tyumenTobolsk/cost"
 import partnersData from "@const/data/tyumenTobolsk/partners"
 import placesData from "@const/data/tyumenTobolsk/places"
+import speakersData from "@const/data/tyumenTobolsk/speakers"
 import Awaits from "@Components/Sections/Awaits";
 import Themes from "@Components/Sections/Themes";
 import Invites from "@Components/Sections/Invites";
@@ -22,6 +23,7 @@ import Cost from "@Components/Sections/Cost";
 import Partners from "@Components/Sections/Partners";
 import Contacts from "@Components/Sections/Contacts";
 import Places from "@Components/Sections/Places";
+import Speakers from "@Components/Sections/Speakers";
 // import {useTheme} from "@mui/material";
 
 const TyumenTobolsk: FC = () => {
@@ -33,7 +35,7 @@ const TyumenTobolsk: FC = () => {
   return (
     <>
       <SHeroImgWrap>
-        <SHeroImg src={heroImg}/>
+        <SHeroImg src={heroImg} alt="Фотография Тюмени" className="baikal-hero__img"/>
       </SHeroImgWrap>
       <Container>
         <Header navItems={navData} invert/>
@@ -48,7 +50,7 @@ const TyumenTobolsk: FC = () => {
         <Invites items={invitesData}/>
         <Program items={programData}/>
         <Places items={placesData}/>
-        {/* speakers here */}
+        <Speakers items={speakersData}/>
         <Cost price={costData.price} desc={costData.desc} href={costData.href}/>
         <Partners items={partnersData}/>
         <Contacts/>

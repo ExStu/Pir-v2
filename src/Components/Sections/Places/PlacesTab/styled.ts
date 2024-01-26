@@ -22,12 +22,18 @@ export const SPlacesItemTitle = styled("div")(() => ({
 }))
 
 export const SPlacesItemRating = styled("div")(() => ({
+  display: "flex",
+  alignItems: "center",
+  gap: "4px",
   position: "absolute",
   top: "30px",
   right: "30px",
 }))
 
 export const SPlacesItemLink = styled(Link)(() => ({
-  paddingLeft: "30px",
+  // display: "flex",
+  // alignItems: "center",
+  // alignSelf: "flex-start",
+  // paddingLeft: "30px",
   paddingBottom: "30px"
 }))

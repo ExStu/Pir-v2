@@ -12,5 +12,6 @@ export const SHeroImg = styled("img")(() => ({
   width: "100%",
   maxHeight: "705px",
   borderRadius: "0 0 100px 100px",
-  background: "linear-gradient(0deg, rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.4) 0%)"
+  background: "linear-gradient(0deg, rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.4) 0%)",
+  filter: "brightness(0.6)"
 }))

@@ -1,5 +1,5 @@
 import {FC} from "react";
-import {SFooter, SFooterTop, SFooterDown, SFooterWrap, SFooterLogosWrap} from "./styled.ts";
+import {SFooter, SFooterTop, SFooterDown, SFooterWrap, SFooterLogosWrap} from "./styled";
 import logo from "@assets/logos/holidays-logo-white.svg"
 import pirExpo from "@assets/logos/pir-expo-white.svg"
 import pirHotel from "@assets/logos/pir-hotel-white.svg"
@@ -11,17 +11,11 @@ import {useTheme} from "@mui/material";
 import ArrowUp from "@shared/UI/Icons/ArrowUp";
 import IconButton from "@Components/UI/Button/IconButton";
 import Link from "@Components/UI/Link";
+import {scrollToTop} from "@utils/scrollToTop.ts";
 
 const Footer: FC = () => {
 
   const {palette}= useTheme()
-  const scrollToTop = () => {
-    const c = document.documentElement.scrollTop || document.body.scrollTop;
-    if (c > 0) {
-      window.requestAnimationFrame(scrollToTop);
-      window.scrollTo(0, c - c / 20);
-    }
-  };
 
   return (
     <SFooter>

@@ -14,7 +14,7 @@ const Hero: FC<IHero> = ({titles, onClick}) => {
           <Typography variant="h1" color={palette.main.white}>{titles.place}</Typography>
           <Typography variant="h2" color={palette.main.white}>{titles.date}</Typography>
         </SHeroTitlesWrap>
-        <SHeroBtn variant="outlined" size="large" onClick={onClick}>
+        <SHeroBtn variant="outlined" size="large" onClick={onClick} className="baikal-hero__btn">
           <Typography variant="t2" color={palette.main.primary}>
             Принять участие
           </Typography>

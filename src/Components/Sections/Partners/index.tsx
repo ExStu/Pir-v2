@@ -2,9 +2,18 @@ import {FC} from "react";
 import {IPartners} from "./types";
 import {SPartners, SPartnersItem, SPartnersList} from "./styled";
 import Link from "@Components/UI/Link";
+import Typography from "@Components/UI/Typography";
 
 const Partners: FC<IPartners> = ({items}) => (
     <SPartners>
+      <Typography
+          variant="h2"
+          marginBottom={5}
+          textAlign="center"
+          textTransform="uppercase"
+      >
+        Партнёры
+      </Typography>
       <SPartnersList>
         {items.map((item) => (
             <SPartnersItem key={item.id}>

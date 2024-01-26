@@ -32,7 +32,8 @@ export const SChip: StyledComponent<ChipProps> = styled(Chip)(({ theme: { palett
       [`&.${chipClasses.root}`]: {
         transition: "background-color .1s ease-in, box-shadow .1s ease-in, color .1s ease-in",
         "&:active": {
-          backgroundColor: isActive ? palette.main.primary : "transparent",
+          backgroundColor: isActive ? palette.main.primary : palette.main.primaryLight,
+          color: palette.main.white
         },
       },
       "&:hover": {

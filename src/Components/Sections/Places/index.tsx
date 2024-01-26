@@ -23,9 +23,9 @@ const Places: FC<IPlaces> = ({items}) => {
           Что посещаем
         </Typography>
         <SPlacesChipWrap>
-          <Chip isActive={useTab === "hotels"} onClick={() => setTab("hotels")} label="Отели"/>
-          <Chip isActive={useTab === "restaurants"} onClick={() => setTab("restaurants")} label="Рестораны" />
-          <Chip isActive={useTab === "other"} onClick={() => setTab("other")} label="Другое"/>
+          <Chip component="button" isActive={useTab === "hotels"} onClick={() => setTab("hotels")} label="Отели"/>
+          <Chip component="button" isActive={useTab === "restaurants"} onClick={() => setTab("restaurants")} label="Рестораны" />
+          <Chip component="button" isActive={useTab === "other"} onClick={() => setTab("other")} label="Другое"/>
         </SPlacesChipWrap>
         <CustomTabPanel index="hotels" value={useTab}>
           <Carousel slidesPerView={3} space={20} className="swiper-places-hotels">

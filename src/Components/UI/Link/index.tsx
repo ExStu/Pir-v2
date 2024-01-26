@@ -7,7 +7,7 @@ import { SLink } from "./styled";
 import {LinkProps} from "@mui/material";
 
 const Link: FC<LinkProps> = ({ variant, ...props }) => (
-    <SLink {...props} underline="none" target="_blank" variant={variant} />
+    <SLink {...props} underline="none" variant={variant} />
 );
 
 export default Link;

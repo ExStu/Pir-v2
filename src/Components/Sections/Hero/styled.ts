@@ -18,5 +18,9 @@ export const SHeroTitlesWrap = styled("div")(() => ({
 }))
 
 export const SHeroBtn = styled(Button)(() => ({
-  width: "300px"
+  width: "300px",
+
+  "&:hover .baikal-hero__img": {
+    transform: "scale(1.15)"
+  }
 }))
