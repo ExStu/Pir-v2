@@ -28,7 +28,7 @@ const Invites: FC<IInvites> = ({items}) => {
       >
         Приглашения от экспертов
       </Typography>
-      <Carousel slidesPerView={3} space={30}>
+      <Carousel slidesPerView={3} space={30} className="swiper-invites">
         {items.map((item) => (
             <SwiperSlide key={item.lastName}>
               <InvitesItem

@@ -13,9 +13,10 @@ interface ICarousel extends PropsWithChildren<unknown> {
   slidesPerView: number
   space: number
   zoom?: boolean
+  className: string
 }
 
-const Carousel: FC<ICarousel> = ({slidesPerView, space, zoom = false, children}) => {
+const Carousel: FC<ICarousel> = ({slidesPerView, space, zoom = false, className, children}) => {
 
   const [nextEl, nextElRef] = useCarouselNav<HTMLButtonElement>();
   const [prevEl, prevElRef] = useCarouselNav<HTMLButtonElement>();
@@ -36,6 +37,7 @@ const Carousel: FC<ICarousel> = ({slidesPerView, space, zoom = false, children})
             zoom={zoom}
             modules={[Autoplay, Navigation, Pagination]}
             style={{position: "static"}}
+            className={className}
         >
           {children}
         </Swiper>

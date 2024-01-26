@@ -4,6 +4,7 @@ import {SPlaces, SPlacesChipWrap} from "./styled";
 import Typography from "@Components/UI/Typography";
 import Chip from "@Components/UI/Chip";
 import {CustomTabPanel} from "@Components/UI/TabsCustom/CustomTabPanel.tsx";
+import PlacesTab from "@Components/Sections/Places/PlacesTab";
 import Carousel from "@Components/UI/Carousel";
 import {SwiperSlide} from "swiper/react";
 
@@ -27,46 +28,58 @@ const Places: FC<IPlaces> = ({items}) => {
           <Chip isActive={useTab === "other"} onClick={() => setTab("other")} label="Другое"/>
         </SPlacesChipWrap>
         <CustomTabPanel index="hotels" value={useTab}>
-          {items.map((item) => (
-              item.category === "hotels" && (
-                  <Carousel slidesPerView={3} space={20}>
+          <Carousel slidesPerView={3} space={20} className="swiper-places-hotels">
+            {items.map((item) => (
+                item.category === "hotels" && (
                     <SwiperSlide key={item.id}>
-                      <img src={item.img} alt={item.title}/>
-                      {item.title}
-                      {item.rating}
-                      {item.href}
+                      <PlacesTab
+                          id={item.id}
+                          category={item.category}
+                          title={item.title}
+                          img={item.img}
+                          href={item.href}
+                          rating={item.rating}
+                      />
                     </SwiperSlide>
-                  </Carousel>
-              )
-          ))}
+                )
+            ))}
+          </Carousel>
         </CustomTabPanel>
         <CustomTabPanel index="restaurants" value={useTab}>
-          {items.map((item) => (
-              item.category === "restaurants" && (
-                  <Carousel slidesPerView={3} space={20}>
-                    <SwiperSlide style={{display: "flex", flexDirection: "column"}} key={item.id}>
-                      <img src={item.img} alt={item.title}/>
-                      {item.title}
-                      {item.rating}
-                      {item.href}
+          <Carousel slidesPerView={3} space={20} className="swiper-places-restaurants">
+            {items.map((item) => (
+                item.category === "restaurants" && (
+                    <SwiperSlide key={item.id}>
+                      <PlacesTab
+                          id={item.id}
+                          category={item.category}
+                          title={item.title}
+                          img={item.img}
+                          href={item.href}
+                          rating={item.rating}
+                      />
                     </SwiperSlide>
-                  </Carousel>
-              )
-          ))}
+                )
+            ))}
+          </Carousel>
         </CustomTabPanel>
         <CustomTabPanel index="other" value={useTab}>
-          {items.map((item) => (
-              item.category === "other" && (
-                  <Carousel slidesPerView={3} space={20}>
+          <Carousel slidesPerView={3} space={20} className="swiper-places-other">
+            {items.map((item) => (
+                item.category === "other" && (
                     <SwiperSlide key={item.id}>
-                      <img src={item.img} alt={item.title}/>
-                      {item.title}
-                      {item.rating}
-                      {item.href}
+                      <PlacesTab
+                          id={item.id}
+                          category={item.category}
+                          title={item.title}
+                          img={item.img}
+                          href={item.href}
+                          rating={item.rating}
+                      />
                     </SwiperSlide>
-                  </Carousel>
-              )
-          ))}
+                )
+            ))}
+          </Carousel>
         </CustomTabPanel>
       </SPlaces>
   )
