@@ -43,3 +43,9 @@ declare module "@mui/material/Typography" {
 declare module '@mui/material/styles/createPalette' {
   interface Palette extends IColors {}
 }
+
+declare module '@mui/material/Chip' {
+  interface ChipOwnProps {
+    isActive?: boolean
+  }
+}

@@ -4,8 +4,8 @@ import type { SxProps, Theme } from "@mui/material/styles";
 import {Box} from "@mui/material";
 
 interface ICustomTabPanel extends PropsWithChildren<unknown> {
-  index: number;
-  value: number;
+  index: number | string;
+  value: number | string;
   childrenSx?: SxProps<Theme>;
 }
 
