@@ -14,6 +14,7 @@ import costData from "@const/data/tyumenTobolsk/cost"
 import partnersData from "@const/data/tyumenTobolsk/partners"
 import placesData from "@const/data/tyumenTobolsk/places"
 import speakersData from "@const/data/tyumenTobolsk/speakers"
+import reviewsData from "@const/data/kaliningrad/reviews"
 import Awaits from "@Components/Sections/Awaits";
 import Themes from "@Components/Sections/Themes";
 import Invites from "@Components/Sections/Invites";
@@ -24,6 +25,8 @@ import Partners from "@Components/Sections/Partners";
 import Contacts from "@Components/Sections/Contacts";
 import Places from "@Components/Sections/Places";
 import Speakers from "@Components/Sections/Speakers";
+import Past from "@Components/Sections/Past";
+import Reviews from "@Components/Sections/Reviews";
 // import {useTheme} from "@mui/material";
 
 const TyumenTobolsk: FC = () => {
@@ -53,6 +56,8 @@ const TyumenTobolsk: FC = () => {
         <Speakers items={speakersData}/>
         <Cost price={costData.price} desc={costData.desc} href={costData.href}/>
         <Partners items={partnersData}/>
+        <Past/>
+        <Reviews items={reviewsData}/>
         <Contacts/>
       </Container>
       <Footer/>

@@ -10,7 +10,7 @@ import { useCarouselNav } from '@utils/useCarouselNav.ts'
 import {SCarousel} from "./styled";
 
 interface ICarousel extends PropsWithChildren<unknown> {
-  slidesPerView: number
+  slidesPerView: number | "auto" | undefined
   space: number
   zoom?: boolean
   className: string

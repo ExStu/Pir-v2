@@ -11,7 +11,8 @@ const colors = {
     border: "rgba(2, 54, 60, 0.3)",
     borderWhite: "#FFFFFF66",
     divider: "#D8D8D8",
-    background: "#00000080"
+    background: "#00000080",
+    reviewText: "#011113"
   }
 };
 export default colors;
