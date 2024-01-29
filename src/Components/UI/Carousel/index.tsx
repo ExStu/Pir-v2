@@ -14,9 +14,17 @@ interface ICarousel extends PropsWithChildren<unknown> {
   space: number
   zoom?: boolean
   className: string
+  modalCustom?: boolean
 }
 
-const Carousel: FC<ICarousel> = ({slidesPerView, space, zoom = false, className, children}) => {
+const Carousel: FC<ICarousel> = ({
+    slidesPerView,
+    space,
+    zoom = false,
+    className,
+    modalCustom,
+    children
+}) => {
 
   const [nextEl, nextElRef] = useCarouselNav<HTMLButtonElement>();
   const [prevEl, prevElRef] = useCarouselNav<HTMLButtonElement>();
@@ -41,8 +49,8 @@ const Carousel: FC<ICarousel> = ({slidesPerView, space, zoom = false, className,
         >
           {children}
         </Swiper>
-        <CarouselBtn ref={prevElRef} variant='prev'/>
-        <CarouselBtn ref={nextElRef} variant='next'/>
+        <CarouselBtn ref={prevElRef} variant='prev' modalCustom={modalCustom}/>
+        <CarouselBtn ref={nextElRef} variant='next' modalCustom={modalCustom}/>
       </SCarousel>
   )
 }

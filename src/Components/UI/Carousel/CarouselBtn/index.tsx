@@ -5,11 +5,18 @@ import {SCarouselBtn} from "./styled";
 import {ICarouselBtn} from "./types";
 export const CarouselBtn = forwardRef<HTMLButtonElement, ICarouselBtn>((
     { variant,
+        modalCustom,
       ...props },
     ref) => (
 
 
-      <SCarouselBtn disabled={props.disabled} ref={ref} {...props} sx={variant === "next" ? {right: "40%"} : {left: "40%"}}>
+      <SCarouselBtn
+          className="carousel-btn"
+          disabled={props.disabled}
+          ref={ref}
+          {...props}
+          sx={variant === "next" ? {right: modalCustom ? "27%" : "40%"} : {left: modalCustom ? "27%" : "40%"}}
+      >
         {variant === 'next' ? (
             <ArrowRight/>
         ) : (

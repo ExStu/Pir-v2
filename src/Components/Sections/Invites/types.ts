@@ -6,8 +6,10 @@ export interface IInvitesItem {
   post: string
   postDesc: ReactNode | string
   image: string
-  // video: string
-  // onClick: () => void
+  onOpenModal: () => void
+  onSetVideo: () => void
+  video?: string
+  poster?: string
 }
 
 export interface IInvites {

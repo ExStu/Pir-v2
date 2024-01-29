@@ -9,6 +9,7 @@ export const SInvitesItem = styled("div")(({theme: {palette}}) => ({
   borderRadius: "30px 0 30px 0",
   transition: "background-color .3s ease-in",
   paddingBottom: "22px",
+  overflow: "hidden",
 
   "&:hover": {
     backgroundColor: palette.uncategorized.background
@@ -70,6 +71,8 @@ export const SInvitesItemCover = styled(Box)(({theme: {palette}}) => ({
   display: "flex",
   flexDirection: "column",
   padding: "20px 40px",
+  width: "79.5%",
+  minHeight: "78px",
   position: "absolute",
   bottom: 0,
   left: 0,

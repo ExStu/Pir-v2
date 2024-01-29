@@ -18,11 +18,17 @@ const InvitesItem: FC<IInvitesItem> = (
       lastName,
       post,
       postDesc,
-      // video,
-      image}
+      onSetVideo,
+      image,
+      onOpenModal}
 ) => {
 
   const {palette} = useTheme()
+
+  const handleOnPlay = () => {
+    onOpenModal()
+    onSetVideo()
+  }
 
   return (
       <SInvitesItem>
@@ -39,7 +45,7 @@ const InvitesItem: FC<IInvitesItem> = (
                       color={palette.main.primary}>{firstName + " " + lastName}</Typography>
           <Typography variant="t5" color={palette.main.primary}>{post}</Typography>
         </SInvitesItemCover>
-        <SInvitesPlay className="invites__play-btn">
+        <SInvitesPlay className="invites__play-btn" onClick={handleOnPlay}>
           <Play/>
           <Typography variant="t5" color={palette.main.white}>Смотреть видео</Typography>
         </SInvitesPlay>
