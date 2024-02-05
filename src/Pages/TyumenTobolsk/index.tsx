@@ -28,7 +28,7 @@ import Speakers from "@Components/Sections/Speakers";
 import Past from "@Components/Sections/Past";
 import Reviews from "@Components/Sections/Reviews";
 // import {useTheme} from "@mui/material";
-
+import { Helmet } from "react-helmet";
 const TyumenTobolsk: FC = () => {
 
   // const {palette} = useTheme()
@@ -37,6 +37,9 @@ const TyumenTobolsk: FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Полезные Каникулы Отельера | Байкал</title>
+      </Helmet>
       <SHeroImgWrap>
         <SHeroImg src={heroImg} alt="Фотография Тюмени" className="baikal-hero__img"/>
       </SHeroImgWrap>
@@ -56,11 +59,13 @@ const TyumenTobolsk: FC = () => {
         <Speakers items={speakersData}/>
         <Cost price={costData.price} desc={costData.desc} href={costData.href}/>
         <Partners items={partnersData}/>
-        <Past/>
-        <Reviews items={reviewsData}/>
+      </Container>
+      <Past/>
+      <Reviews items={reviewsData}/>
+      <Container>
         <Contacts/>
       </Container>
-      <Footer/>
+      <Footer navItems={navData}/>
     </>
   )
 }

@@ -8,7 +8,7 @@ import {Chip} from "@mui/material";
 import mq from "@shared/themes/breakpoints.ts";
 import {styled} from "@mui/material/styles";
 
-export const SChip: StyledComponent<ChipProps> = styled(Chip)(({ theme: { palette }, variant, isActive }) =>
+export const SChip: StyledComponent<ChipProps> = styled(Chip)(({ theme: { palette }, variant, active }) =>
     mq({
       [`&.${chipClasses.clickable}`]: {
         boxShadow: "none",
@@ -27,18 +27,18 @@ export const SChip: StyledComponent<ChipProps> = styled(Chip)(({ theme: { palett
       height: "auto",
       borderRadius: "9px",
       padding: "0 18px",
-      backgroundColor: isActive ? palette.main.primary : "transparent",
-      color: isActive ? palette.main.white : palette.main.primary,
+      backgroundColor: active ? palette.main.primary : "transparent",
+      color: active ? palette.main.white : palette.main.primary,
       [`&.${chipClasses.root}`]: {
         transition: "background-color .1s ease-in, box-shadow .1s ease-in, color .1s ease-in",
         "&:active": {
-          backgroundColor: isActive ? palette.main.primary : palette.main.primaryLight,
+          backgroundColor: active ? palette.main.primary : palette.main.primaryLight,
           color: palette.main.white
         },
       },
       "&:hover": {
         cursor: "pointer",
-        backgroundColor: isActive ? palette.main.primary : palette.main.primaryLight,
+        backgroundColor: active ? palette.main.primary : palette.main.primaryLight,
         color: palette.main.white,
       },
       [`& .${chipClasses.label}`]: {
@@ -53,7 +53,7 @@ export const SChip: StyledComponent<ChipProps> = styled(Chip)(({ theme: { palett
           borderRadius: "100px",
           padding: "8px 16px",
           border: "none",
-          backgroundColor: isActive ? palette.main.primary : "transparent",
+          backgroundColor: active ? palette.main.primary : "transparent",
           color: palette.main.primaryLight,
           [`&.${chipClasses.root}`]: {
             "&:active": {

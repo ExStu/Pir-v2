@@ -3,7 +3,6 @@ import {SFooter, SFooterTop, SFooterDown, SFooterWrap, SFooterLogosWrap} from ".
 import logo from "@assets/logos/holidays-logo-white.svg"
 import pirExpo from "@assets/logos/pir-expo-white.svg"
 import pirHotel from "@assets/logos/pir-hotel-white.svg"
-import navData from "@const/data/home/nav"
 import Container from "@Components/Container";
 import NavMenu from "@Components/UI/NavMenu";
 import Typography from "@Components/UI/Typography";
@@ -12,8 +11,13 @@ import ArrowUp from "@shared/UI/Icons/ArrowUp";
 import IconButton from "@Components/UI/Button/IconButton";
 import Link from "@Components/UI/Link";
 import {scrollToTop} from "@utils/scrollToTop.ts";
+import {INavItem} from "@Components/UI/NavMenu/types.ts";
 
-const Footer: FC = () => {
+interface IFooter {
+  navItems: INavItem[]
+}
+
+const Footer: FC<IFooter> = ({navItems}) => {
 
   const {palette}= useTheme()
 
@@ -23,7 +27,7 @@ const Footer: FC = () => {
         <SFooterWrap>
           <SFooterTop>
             <img src={logo} alt="Логотип Полезные Каникулы Отельера"/>
-            <NavMenu items={navData} invert/>
+            <NavMenu items={navItems} invert/>
           </SFooterTop>
           <SFooterDown>
             <Typography variant="t2" color={palette.main.white}>

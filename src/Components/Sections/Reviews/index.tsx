@@ -16,9 +16,9 @@ const Reviews: FC<IReviews> = ({items}) => (
       >
         Отзывы
       </Typography>
-      <Carousel slidesPerView={1} space={32} className="swiper-reviews">
+      <Carousel slidesPerView={2} space={32} centeredSlides className="swiper-reviews">
         {items.map((item) => (
-            <SwiperSlide>
+            <SwiperSlide key={item.name}>
               <ReviewItem
                   name={item.name}
                   post={item.post}

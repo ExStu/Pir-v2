@@ -2,7 +2,7 @@ import {FC} from "react";
 import {IPlacesItem} from "../types";
 import {
   SPlacesItem, SPlacesItemImg,
-  SPlacesItemLink,
+  SPlacesItemLinkWrap,
   SPlacesItemRating,
   SPlacesItemTitle
 } from "@Components/Sections/Places/PlacesTab/styled.ts";
@@ -10,6 +10,8 @@ import Typography from "@Components/UI/Typography";
 import {useTheme} from "@mui/material";
 import Star from "@shared/UI/Icons/Star";
 import {SNavItemLinkWrap} from "@shared/UI/NavItemLinkWrap/styled.ts";
+import Link from "@Components/UI/Link";
+import ArrowLink from "@shared/UI/Icons/ArrowLink";
 
 const PlacesTab: FC<IPlacesItem> = ({img, title, rating, href}) => {
   const {palette} = useTheme()
@@ -17,15 +19,18 @@ const PlacesTab: FC<IPlacesItem> = ({img, title, rating, href}) => {
   return (
       <SPlacesItem>
         <SPlacesItemImg src={img} alt={title}/>
-        <SPlacesItemTitle>
+        <SPlacesItemTitle hasLink={!!href}>
           <Typography variant="h5" color={palette.main.white} textTransform="uppercase">{title}</Typography>
         </SPlacesItemTitle>
         {href && (
-            <SNavItemLinkWrap color={palette.main.secondary}>
-              <SPlacesItemLink color={palette.main.secondary} variant="t2" href={href} target="_blank">
-                Перейти на сайт
-              </SPlacesItemLink>
-            </SNavItemLinkWrap>
+            <SPlacesItemLinkWrap>
+              <SNavItemLinkWrap color={palette.main.secondary}>
+                <Link className="places__link" color={palette.main.secondary} variant="t2" href={href} target="_blank">
+                  Перейти на сайт
+                  <ArrowLink/>
+                </Link>
+              </SNavItemLinkWrap>
+            </SPlacesItemLinkWrap>
         )}
         {rating && (
             <SPlacesItemRating>

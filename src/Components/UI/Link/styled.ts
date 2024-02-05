@@ -10,6 +10,8 @@ import mq from "@shared/themes/breakpoints.ts";
 export const SLink: StyledComponent<LinkProps> = styled(Link)(
     ({ theme: {palette, typography }, variant, color }) =>
         mq({
+          display: "flex",
+          alignItems: "center",
           fontFeatureSettings: "'pnum' on, 'lnum' on",
           color: color || palette.main.primary,
 

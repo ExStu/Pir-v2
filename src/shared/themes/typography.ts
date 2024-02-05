@@ -40,7 +40,7 @@ export default {
     t1: {
       fontStyle: "normal",
       fontWeight: "600",
-      fontSize: "29px",
+      fontSize: "calc( 1.1vw + .625rem )",
       lineHeight: "117%",
     },
     t2: {

@@ -1,6 +1,7 @@
 import {styled} from "@mui/material/styles";
+import {motion} from "framer-motion";
 
-export const SProgramItem = styled("li")(({theme: {palette}}) => ({
+export const SProgramItem = styled(motion.li)(({theme: {palette}}) => ({
   display: "flex",
   alignItems: "center",
   padding: "32px 0",

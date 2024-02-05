@@ -1,6 +1,7 @@
 export interface IProgramItem {
   time: string
   program: string
+  inView?: boolean
 }
 
 export interface IProgramTabs {

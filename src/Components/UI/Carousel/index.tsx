@@ -13,6 +13,7 @@ interface ICarousel extends PropsWithChildren<unknown> {
   slidesPerView: number | "auto" | undefined
   space: number
   zoom?: boolean
+  centeredSlides?: boolean
   className: string
   modalCustom?: boolean
 }
@@ -21,6 +22,7 @@ const Carousel: FC<ICarousel> = ({
     slidesPerView,
     space,
     zoom = false,
+    centeredSlides = false,
     className,
     modalCustom,
     children
@@ -42,6 +44,7 @@ const Carousel: FC<ICarousel> = ({
               dynamicBullets: true
             }}
             speed={500}
+            centeredSlides={centeredSlides}
             zoom={zoom}
             modules={[Autoplay, Navigation, Pagination]}
             style={{position: "static"}}

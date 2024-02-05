@@ -1,5 +1,4 @@
 import {styled} from "@mui/material/styles";
-import Link from "@Components/UI/Link";
 
 export const SPlacesItem = styled("div")(() => ({
   display: "flex",
@@ -14,11 +13,17 @@ export const SPlacesItemImg = styled("img")(() => ({
   filter: "brightness(0.6)"
 }))
 
-export const SPlacesItemTitle = styled("div")(() => ({
+interface ISPlacesItemTitle {
+  hasLink?: boolean
+}
+
+export const SPlacesItemTitle = styled("div", {
+  shouldForwardProp: props => props !== "hasLink"
+})((props: ISPlacesItemTitle) => ({
   padding: "0 30px",
   position: "absolute",
   left: 0,
-  bottom: "120px"
+  bottom: props.hasLink ? "120px" : "18px"
 }))
 
 export const SPlacesItemRating = styled("div")(() => ({
@@ -30,10 +35,20 @@ export const SPlacesItemRating = styled("div")(() => ({
   right: "30px",
 }))
 
-export const SPlacesItemLink = styled(Link)(() => ({
-  // display: "flex",
-  // alignItems: "center",
-  // alignSelf: "flex-start",
-  // paddingLeft: "30px",
-  paddingBottom: "30px"
+export const SPlacesItemLinkWrap = styled("div")(() => ({
+  display: "flex",
+  alignItems: "center",
+  paddingBottom: "30px",
+
+  "& .places__link": {
+    gap: "10px",
+
+    "& svg": {
+      transition: "transform .15s ease-in",
+    },
+
+    "&:hover svg": {
+      transform: "rotate(-45deg)"
+    }
+  }
 }))

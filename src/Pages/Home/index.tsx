@@ -19,7 +19,7 @@ const Home: FC = () => {
           <Contacts/>
         </main>
       </Container>
-      <Footer/>
+      <Footer navItems={homeNavData}/>
     </>
 
   )

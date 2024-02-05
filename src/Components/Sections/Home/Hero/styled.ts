@@ -1,4 +1,5 @@
 import {styled} from "@mui/material/styles";
+import mq from "@shared/themes/breakpoints.ts";
 
 export const SHeroSection = styled("section")(() => ({
   paddingTop: "30px",
@@ -9,10 +10,11 @@ export const SHeroMain = styled("div")(() => ({
   borderRadius: "0px 100px",
   position: "relative",
   maxHeight: "608px",
+}))
 
-  "& img": {
-    width: "100%",
-  }
+export const SHeroMainImg = styled("img")(() => ({
+  width: "100%",
+  filter: "brightness(0.8)",
 }))
 
 export const SHeroMainTitleWrap = styled("div")(() => ({
@@ -29,14 +31,19 @@ export const SHeroMainTitleWrap = styled("div")(() => ({
 export const SHeroLogosWrap = styled("div")(() => ({
   display: "flex",
   alignItems: "center",
-  gap: "45px"
+  gap: "45px",
+  zIndex: 1
 }))
 
-export const SHeroMiddleWrap = styled("div")(() => ({
+export const SHeroMiddleWrap = styled("div")(() => mq({
   display: "flex",
   justifyContent: "space-between",
   padding: "15px 0",
-  gap: "15px"
+  gap: "15px",
+
+  "& img": {
+    width: ["100%", "560px", "100%"]
+  }
 }))
 
 export const SHeroMiddleLeft = styled("div")(({theme: {palette}}) => ({

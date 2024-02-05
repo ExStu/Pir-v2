@@ -7,7 +7,7 @@ import {
   SHeroMiddleLeftWrap,
   SHeroMiddleWrap,
   SHeroSection,
-  SHeroLogosWrap
+  SHeroLogosWrap, SHeroMainImg
 } from "./styled.ts";
 
 import heroImg from "@assets/images/home/hero.webp"
@@ -24,7 +24,7 @@ const HomeHero: FC = () => {
   return (
     <SHeroSection>
       <SHeroMain>
-        <img src={heroImg} alt="Полезные каникулы отельера"/>
+        <SHeroMainImg src={heroImg} alt="Полезные каникулы отельера"/>
         <SHeroMainTitleWrap>
           <Typography variant="h1" color={palette.main.white} textTransform="uppercase" textAlign="center">
             Полезные каникулы отельера

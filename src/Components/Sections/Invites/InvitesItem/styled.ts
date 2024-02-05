@@ -4,7 +4,6 @@ export const SInvitesItem = styled("div")(({theme: {palette}}) => ({
   display: "flex",
   flexDirection: "column",
   position: "relative",
-  cursor: "pointer",
   alignItems: "center",
   borderRadius: "30px 0 30px 0",
   transition: "background-color .3s ease-in",
@@ -94,4 +93,5 @@ export const SInvitesPlay = styled("div")(({theme: {palette}}) => ({
   borderBottom: `1px solid ${palette.uncategorized.borderWhite}`,
   opacity: 0,
   transition: "opacity .3s ease-in-out",
+  cursor: "pointer"
 }))

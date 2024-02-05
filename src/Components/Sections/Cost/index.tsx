@@ -19,7 +19,7 @@ const Cost: FC<ICost> = ({price, desc, href}) => (
           <Typography variant="t2">{desc.title}</Typography>
           <SCostCardDescList>
             {desc.list.map((item) => (
-                <li>
+                <li key={item.item}>
                   <Typography variant="t3">{item.item}</Typography>
                 </li>
             ))}
