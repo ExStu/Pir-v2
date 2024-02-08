@@ -4,19 +4,19 @@ export default {
     h1: {
       fontStyle: "normal",
       fontWeight: "900",
-      fontSize: "76px",
+      fontSize: ["40px", "60px", "76px"],
       lineHeight: "117%",
     },
     h2: {
       fontStyle: "normal",
       fontWeight: "800",
-      fontSize: "50px",
+      fontSize: ["32px", "50px"],
       lineHeight: "117%",
     },
     h3: {
       fontStyle: "normal",
       fontWeight: "800",
-      fontSize: "35px",
+      fontSize: ["32px", "35px"],
       lineHeight: "117%",
     },
     h4: {
@@ -40,19 +40,19 @@ export default {
     t1: {
       fontStyle: "normal",
       fontWeight: "600",
-      fontSize: "calc( 1.1vw + .625rem )",
+      fontSize: ["19px", "19px", "29px"],
       lineHeight: "117%",
     },
     t2: {
       fontStyle: "normal",
       fontWeight: "700",
-      fontSize: "24px",
+      fontSize: ["18px", "24px"],
       lineHeight: "117%",
     },
     t3: {
       fontStyle: "normal",
-      fontWeight: "400",
-      fontSize: "20px",
+      fontWeight: ["500", "400"],
+      fontSize: ["16px", "20px"],
       lineHeight: "117%",
     },
     t4: {

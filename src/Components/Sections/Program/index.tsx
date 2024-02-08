@@ -1,4 +1,4 @@
-import {FC, SyntheticEvent, useState} from "react";
+import {forwardRef, SyntheticEvent, useState} from "react";
 import {SProgram, SProgramList, SProgramTabsWrap} from "./styled";
 import Typography from "@Components/UI/Typography";
 import {IProgram} from "./types";
@@ -9,15 +9,14 @@ import ProgramItem from "@Components/Sections/Program/ProgramItem";
 import {AnimatePresence} from "framer-motion";
 import {tabContentAnimation} from "./animations";
 
-const Program: FC<IProgram> = ({items}) => {
+const Program = forwardRef<HTMLElement, IProgram>(({items}, ref) => {
   const [useTab, setTab] = useState(0)
-
   const handleChangeTab = (_event: SyntheticEvent, newValue: number) => {
     setTab(newValue);
   };
 
   return (
-      <SProgram id="program">
+      <SProgram id="program" ref={ref}>
         <Typography
             variant="h2"
             marginBottom={5}
@@ -35,8 +34,8 @@ const Program: FC<IProgram> = ({items}) => {
           </Tabs>
         </SProgramTabsWrap>
         {items.map((item, index) => (
-            <CustomTabPanel index={useTab} value={index}>
-              <AnimatePresence mode="wait">
+            <CustomTabPanel key={item.date} index={useTab} value={index}>
+              <AnimatePresence mode="wait" key={item.date}>
                 <SProgramList
                     variants={tabContentAnimation}
                     initial="hidden"
@@ -53,6 +52,6 @@ const Program: FC<IProgram> = ({items}) => {
         ))}
       </SProgram>
   )
-}
+})
 
 export default Program;

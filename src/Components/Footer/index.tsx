@@ -15,9 +15,10 @@ import {INavItem} from "@Components/UI/NavMenu/types.ts";
 
 interface IFooter {
   navItems: INavItem[]
+  scrollFn?: (href: string) => void
 }
 
-const Footer: FC<IFooter> = ({navItems}) => {
+const Footer: FC<IFooter> = ({navItems, scrollFn}) => {
 
   const {palette}= useTheme()
 
@@ -27,7 +28,7 @@ const Footer: FC<IFooter> = ({navItems}) => {
         <SFooterWrap>
           <SFooterTop>
             <img src={logo} alt="Логотип Полезные Каникулы Отельера"/>
-            <NavMenu items={navItems} invert/>
+            <NavMenu items={navItems} invert scrollFn={scrollFn}/>
           </SFooterTop>
           <SFooterDown>
             <Typography variant="t2" color={palette.main.white}>

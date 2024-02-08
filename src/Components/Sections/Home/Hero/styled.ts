@@ -42,20 +42,23 @@ export const SHeroMiddleWrap = styled("div")(() => mq({
   gap: "15px",
 
   "& img": {
-    width: ["100%", "560px", "100%"]
+    width: ["50%", "50%", "60%"]
   }
 }))
 
-export const SHeroMiddleLeft = styled("div")(({theme: {palette}}) => ({
-  padding: "86px 56px",
-  borderRadius: "110px 0",
+export const SHeroMiddleLeft = styled("div")(({theme: {palette}}) => mq({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  padding: ["60px 30px", "30px 25px", "86px 56px"],
+  borderRadius: ["70px 0", "40px 0", "110px 0"],
   backgroundColor: palette.main.primary
 }))
 
-export const SHeroMiddleLeftWrap = styled("div")(() => ({
+export const SHeroMiddleLeftWrap = styled("div")(() => mq({
   display: "flex",
   flexDirection: "column",
-  gap: "50px"
+  gap: ["30px", "30px", "50px"]
 }))
 
 export const SHeroBottom = styled("div")(({theme: {palette}}) => ({

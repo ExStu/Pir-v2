@@ -13,9 +13,10 @@ import Link from "@Components/UI/Link";
 interface IHeader {
   navItems: INavItem[]
   invert?: boolean
+  scrollFn?: (href: string) => void
 }
 
-const Header: FC<IHeader> = ({navItems, invert}) => {
+const Header: FC<IHeader> = ({navItems, invert, scrollFn}) => {
   return (
       <SHeader>
         {!invert ? (
@@ -23,7 +24,7 @@ const Header: FC<IHeader> = ({navItems, invert}) => {
         ) : (
             <img src={holidaysLogoWhite} alt="Логотип проекта Полезные Каникулы Отельера"/>
         )}
-        <NavMenu invert={invert} items={navItems}/>
+        <NavMenu invert={invert} items={navItems} scrollFn={scrollFn}/>
         <SHeaderLogoWrap>
           <Link href="https://pirexpo.com/" target="_blank" rel="noopener noreferrer">
             {!invert ? (

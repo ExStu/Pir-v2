@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {FC, useRef} from "react";
 import Container from "@Components/Container";
 import Header from "@Components/Header";
 import navData from "@const/data/tyumenTobolsk/nav"
@@ -31,9 +31,22 @@ import Reviews from "@Components/Sections/Reviews";
 import { Helmet } from "react-helmet";
 const TyumenTobolsk: FC = () => {
 
-  // const {palette} = useTheme()
   // TODO:
   // hero hover
+
+  const programRef = useRef<HTMLElement>(null)
+  const speakersRef = useRef<HTMLElement>(null)
+  const allRefs = [programRef, speakersRef]
+
+  const handleScrollToRef = (href: string) => {
+    for(const ref of allRefs) {
+      if(ref.current?.id === href.slice(1)){
+        ref.current?.scrollIntoView({
+          behavior: "smooth"
+        })
+      }
+    }
+  }
 
   return (
     <>
@@ -44,7 +57,7 @@ const TyumenTobolsk: FC = () => {
         <SHeroImg src={heroImg} alt="Фотография Тюмени" className="baikal-hero__img"/>
       </SHeroImgWrap>
       <Container>
-        <Header navItems={navData} invert/>
+        <Header navItems={navData} invert scrollFn={handleScrollToRef}/>
         <Hero
           titles={
             {place: heroData.place, date: heroData.date}
@@ -54,9 +67,9 @@ const TyumenTobolsk: FC = () => {
         <Awaits items={awaitsData}/>
         <Themes items={themesData}/>
         <Invites items={invitesData}/>
-        <Program items={programData}/>
+        <Program items={programData} ref={programRef}/>
         <Places items={placesData}/>
-        <Speakers items={speakersData}/>
+        <Speakers items={speakersData} ref={speakersRef}/>
         <Cost price={costData.price} desc={costData.desc} href={costData.href}/>
         <Partners items={partnersData}/>
       </Container>
@@ -65,7 +78,7 @@ const TyumenTobolsk: FC = () => {
       <Container>
         <Contacts/>
       </Container>
-      <Footer navItems={navData}/>
+      <Footer navItems={navData} scrollFn={handleScrollToRef}/>
     </>
   )
 }

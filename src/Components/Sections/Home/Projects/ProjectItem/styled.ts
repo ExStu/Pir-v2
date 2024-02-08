@@ -10,6 +10,7 @@ export const SProjectItem: StyledComponent<ISProjectItem> = styled("li")(({image
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
+  alignItems: "center",
   padding: "80px 60px",
   background: `linear-gradient(0deg, rgba(0, 0, 0, 0.2) 100%, rgba(0, 0, 0, 0.4) 0%), url(${image})`,
   backgroundRepeat: "no-repeat",
@@ -32,5 +33,6 @@ export const STextWrap = styled("div")(() => ({
 }))
 
 export const SProjectItemBtn = styled(Button)(() => ({
-  pointerEvents: "auto"
+  pointerEvents: "auto",
+  maxWidth: "236px"
 }))

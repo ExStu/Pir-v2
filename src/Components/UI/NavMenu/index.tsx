@@ -3,12 +3,13 @@ import {INavMenu} from "./types.ts";
 import NavItem from "@Components/UI/NavMenu/NavItem";
 import {SNavMenuList} from "@Components/UI/NavMenu/styled.ts";
 
-const NavMenu: FC<INavMenu> = ({items, invert}) => {
+const NavMenu: FC<INavMenu> = ({items, invert, scrollFn}) => {
+
   return (
     <nav>
       <SNavMenuList>
         {items.map((item) => (
-            <NavItem key={item.text} text={item.text} bold={item.bold} href={item.href} invert={invert}/>
+            <NavItem key={item.text} text={item.text} bold={item.bold} href={item.href} invert={invert} scrollFn={scrollFn}/>
         ))}
       </SNavMenuList>
     </nav>

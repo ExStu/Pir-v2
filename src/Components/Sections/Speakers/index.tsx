@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {forwardRef} from "react";
 import {ISpeakers} from "./types";
 import {SSpeakers} from "./styled";
 import Typography from "@Components/UI/Typography";
@@ -6,9 +6,9 @@ import Carousel from "@Components/UI/Carousel";
 import {SwiperSlide} from "swiper/react";
 import SpeakersItem from "@Components/Sections/Speakers/SpeakersItem";
 
-const Speakers: FC<ISpeakers> = ({items}) => {
+const Speakers = forwardRef<HTMLElement, ISpeakers>(({items }, ref) => {
   return (
-      <SSpeakers id="speakers">
+      <SSpeakers id="speakers" ref={ref}>
         <Typography
             variant="h2"
             marginBottom={5}
@@ -32,6 +32,6 @@ const Speakers: FC<ISpeakers> = ({items}) => {
         </Carousel>
       </SSpeakers>
   )
-}
+});
 
 export default Speakers;
