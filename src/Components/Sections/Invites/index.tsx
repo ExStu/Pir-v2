@@ -10,12 +10,14 @@ import {
   SInvitesModalVideoWrap
 } from "@Components/Sections/Invites/styled.ts";
 import Typography from "@Components/UI/Typography";
-import {useTheme} from "@mui/material";
+import {useMediaQuery, useTheme} from "@mui/material";
 import Modal, {ModalBox} from "@Components/UI/Modal";
 
 const Invites: FC<IInvites> = ({items}) => {
 
-  const {palette} = useTheme()
+  const {palette, breakpoints} = useTheme()
+  const isTablet = useMediaQuery(breakpoints.down("md"))
+  const isMobile = useMediaQuery(breakpoints.down("sm"))
 
   const [isOpen, setIsOpen] = useState(false)
   const [useTab, setTab] = useState<IInvitesItem>()
@@ -40,7 +42,7 @@ const Invites: FC<IInvites> = ({items}) => {
         >
           Приглашения от экспертов
         </Typography>
-        <Carousel slidesPerView={3} space={30} className="swiper-invites">
+        <Carousel slidesPerView={isMobile ? 1 : isTablet ? 2 : 3} space={30} className="swiper-invites">
           {items.map((item) => (
               <SwiperSlide key={item.lastName}>
                 <InvitesItem

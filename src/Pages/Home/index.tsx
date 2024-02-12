@@ -11,14 +11,14 @@ import Footer from "@Components/Footer";
 const Home: FC = () => {
   return (
     <>
-      <Container>
-        <Header navItems={homeNavData}/>
+      <Header scrollFn={() => {}} navItems={homeNavData}/>
         <main>
-          <HomeHero/>
-          <Projects items={homeProjects}/>
-          <Contacts/>
+          <Container>
+            <HomeHero/>
+            <Projects items={homeProjects}/>
+            <Contacts/>
+          </Container>
         </main>
-      </Container>
       <Footer navItems={homeNavData}/>
     </>
 

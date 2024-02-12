@@ -10,11 +10,11 @@ const Hero: FC<IHero> = ({titles, onClick}) => {
   return (
       <SHeroWrap>
         <SHeroTitlesWrap>
-          <Typography variant="h3" color={palette.main.white}>ПОЛЕЗНЫЕ КАНИКУЛЫ ОТЕЛЬЕРА</Typography>
-          <Typography variant="h1" color={palette.main.white}>{titles.place}</Typography>
-          <Typography variant="h2" color={palette.main.white}>{titles.date}</Typography>
+          <Typography textTransform="uppercase" variant="h3" color={palette.main.white}>ПОЛЕЗНЫЕ КАНИКУЛЫ ОТЕЛЬЕРА</Typography>
+          <Typography textTransform="uppercase" variant="h1" color={palette.main.white}>{titles.place}</Typography>
+          <Typography textTransform="uppercase" variant="h2" color={palette.main.white}>{titles.date}</Typography>
         </SHeroTitlesWrap>
-        <SHeroBtn variant="outlined" size="large" onClick={onClick} className="baikal-hero__btn">
+        <SHeroBtn sx={{visibility: onClick === null ? "hidden" : "visible"}} variant="outlined" size="large" onClick={onClick} className="baikal-hero__btn">
           <Typography variant="t2" color={palette.main.primary}>
             Принять участие
           </Typography>

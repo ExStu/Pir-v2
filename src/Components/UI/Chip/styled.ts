@@ -1,6 +1,3 @@
-
-// import styled from "@emotion/styled";
-
 import {chipClasses, ChipProps} from "@mui/material/Chip";
 
 import type { StyledComponent } from "@emotion/styled";
@@ -8,7 +5,9 @@ import {Chip} from "@mui/material";
 import mq from "@shared/themes/breakpoints.ts";
 import {styled} from "@mui/material/styles";
 
-export const SChip: StyledComponent<ChipProps> = styled(Chip)(({ theme: { palette }, variant, active }) =>
+export const SChip: StyledComponent<ChipProps> = styled(Chip, {
+  shouldForwardProp: props => props !== "active"
+})(({ theme: { palette }, variant, active }) =>
     mq({
       [`&.${chipClasses.clickable}`]: {
         boxShadow: "none",
@@ -25,8 +24,8 @@ export const SChip: StyledComponent<ChipProps> = styled(Chip)(({ theme: { palett
       },
       // height: ["36px", "40px"],
       height: "auto",
-      borderRadius: "9px",
-      padding: "0 18px",
+      borderRadius: ["4px", "9px"],
+      padding: ["2px 18px", "0 18px"],
       backgroundColor: active ? palette.main.primary : "transparent",
       color: active ? palette.main.white : palette.main.primary,
       [`&.${chipClasses.root}`]: {

@@ -1,17 +1,19 @@
 import {styled} from "@mui/material/styles";
 import {Box, boxClasses} from "@mui/material";
-export const SInvitesItem = styled("div")(({theme: {palette}}) => ({
+import mq from "@shared/themes/breakpoints.ts";
+export const SInvitesItem = styled("div")(({theme: {palette}}) => mq({
   display: "flex",
   flexDirection: "column",
   position: "relative",
   alignItems: "center",
   borderRadius: "30px 0 30px 0",
   transition: "background-color .3s ease-in",
-  paddingBottom: "22px",
+  paddingBottom: [0, 0, "22px"],
   overflow: "hidden",
+  alignSelf: "center",
 
   "&:hover": {
-    backgroundColor: palette.uncategorized.background
+    backgroundColor: ["transparent", "transparent", palette.uncategorized.background]
   },
 
   [`&:hover .${boxClasses.root}`]: {
@@ -20,11 +22,11 @@ export const SInvitesItem = styled("div")(({theme: {palette}}) => ({
   },
 
   "&:hover img": {
-    filter: "brightness(0.4)"
+    filter: ["brightness(1)", "brightness(1)", "brightness(0.4)"]
   },
 
   "&:hover .invites__img": {
-    transform: "scale(1.1)"
+    transform: ["scale(1)", "scale(1)", "scale(1.1)"]
   },
 
   "&:hover .invites__play-btn": {
@@ -46,32 +48,33 @@ export const SInvitesItemTop = styled("div")(() => ({
   }
 }))
 
-export const SInvitesItemDecor = styled("div")(({theme: {palette}}) => ({
-  width: "130px",
-  height: "130px",
+export const SInvitesItemDecor = styled("div")(({theme: {palette}}) => mq({
+  width: ["100px", "130px"],
+  height: ["100px", "130px"],
   backgroundColor: palette.main.primary,
-  borderRadius: "40px 0 40px 0",
+  borderRadius: ["30px 0 30px 0", "40px 0 40px 0"],
 }))
 
-export const SInvitesItemImgWrap = styled("div")(() => ({
+export const SInvitesItemImgWrap = styled("div")(() => mq({
   display: "block",
   overflow: "hidden",
   marginBottom: "12px",
-  width: "339px",
-  height: "327px",
+
   borderRadius: "0 55px 0 55px",
 
   "& img": {
-    transition: "filter .3s ease-in-out, transform .3s ease-in-out"
+    transition: "filter .3s ease-in-out, transform .3s ease-in-out",
+    width: ["206px", "265px", "339px"],
+    height: ["198px", "252px", "327px"],
   }
 }))
 
-export const SInvitesItemCover = styled(Box)(({theme: {palette}}) => ({
+export const SInvitesItemCover = styled(Box)(({theme: {palette}}) => mq({
   display: "flex",
   flexDirection: "column",
   padding: "20px 40px",
   width: "79.5%",
-  minHeight: "78px",
+  minHeight: ["78px", "83px", "78px"],
   position: "absolute",
   bottom: 0,
   left: 0,
@@ -81,17 +84,23 @@ export const SInvitesItemCover = styled(Box)(({theme: {palette}}) => ({
   transition: "transform .3s ease-in-out, opacity .3s ease-in-out"
 }))
 
-export const SInvitesPlay = styled("div")(({theme: {palette}}) => ({
-  position: "absolute",
+export const SInvitesPlay = styled("div")(({theme: {palette}}) => mq({
+  position: ["static", "static", "absolute"],
   left: "44px",
   bottom: "130px",
-  width: "76%",
+  width: ["50%", "70%", "76%"],
   display: "flex",
   alignItems: "center",
   gap: "20px",
+  marginTop: ["24px", "24px", 0],
   paddingBottom: "15px",
-  borderBottom: `1px solid ${palette.uncategorized.borderWhite}`,
-  opacity: 0,
+  borderBottom: [`1px solid ${palette.uncategorized.border}`, `1px solid ${palette.uncategorized.border}`, `1px solid ${palette.uncategorized.borderWhite}`],
+  opacity: [1, 1, 0],
   transition: "opacity .3s ease-in-out",
-  cursor: "pointer"
+  cursor: "pointer",
+
+  "@media(min-width: 1024px)": {
+    position: "absolute",
+    opacity: 0
+  }
 }))

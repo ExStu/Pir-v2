@@ -17,7 +17,7 @@ const Partners: FC<IPartners> = ({items}) => (
       <SPartnersList>
         {items.map((item) => (
             <SPartnersItem key={item.id}>
-              <Link href={item.href}>
+              <Link target="_blank" href={item.href}>
                 <img src={item.img} alt={item.alt}/>
               </Link>
             </SPartnersItem>

@@ -10,7 +10,7 @@ import {
 } from "./styled";
 import holidaysLogo from "@assets/logos/holidays-logo-primary.svg"
 import Typography from "@Components/UI/Typography";
-import {useTheme} from "@mui/material";
+import {useMediaQuery, useTheme} from "@mui/material";
 import Play from "@shared/UI/Icons/Play";
 
 const InvitesItem: FC<IInvitesItem> = (
@@ -23,11 +23,16 @@ const InvitesItem: FC<IInvitesItem> = (
       onOpenModal}
 ) => {
 
-  const {palette} = useTheme()
+  const {palette, breakpoints} = useTheme()
+  const isTablet = useMediaQuery(breakpoints.down("md"))
 
   const handleOnPlay = () => {
-    onOpenModal()
-    onSetVideo()
+    if (onOpenModal) {
+      onOpenModal()
+    }
+    if (onSetVideo) {
+      onSetVideo()
+    }
   }
 
   return (
@@ -39,15 +44,22 @@ const InvitesItem: FC<IInvitesItem> = (
         <SInvitesItemImgWrap>
           <img className="invites__img" src={image} alt={firstName + " " + lastName}/>
         </SInvitesItemImgWrap>
-        <Typography textAlign="center" variant="t4" color={palette.main.primary}>{postDesc}</Typography>
-        <SInvitesItemCover>
-          <Typography variant="h4" sx={{fontSize: "20px"}}
-                      color={palette.main.primary}>{firstName + " " + lastName}</Typography>
-          <Typography variant="t5" color={palette.main.primary}>{post}</Typography>
-        </SInvitesItemCover>
+        <Typography textAlign="center" variant="t4" color={palette.main.primary}>{isTablet ? firstName + " " + lastName : postDesc}</Typography>
+        {!isTablet && (
+            <SInvitesItemCover>
+              <Typography
+                  variant="h4"
+                  color={palette.main.primary}
+              >
+                {firstName + " " + lastName}
+              </Typography>
+              <Typography variant="t5" color={palette.main.primary}>{post}</Typography>
+            </SInvitesItemCover>
+        )}
+
         <SInvitesPlay className="invites__play-btn" onClick={handleOnPlay}>
           <Play/>
-          <Typography variant="t5" color={palette.main.white}>Смотреть видео</Typography>
+          <Typography variant="t5" color={isTablet ? palette.main.primary : palette.main.white}>Смотреть видео</Typography>
         </SInvitesPlay>
       </SInvitesItem>
   )

@@ -7,9 +7,16 @@ const NavMenu: FC<INavMenu> = ({items, invert, scrollFn}) => {
 
   return (
     <nav>
-      <SNavMenuList>
+      <SNavMenuList className="nav-menu">
         {items.map((item) => (
-            <NavItem key={item.text} text={item.text} bold={item.bold} href={item.href} invert={invert} scrollFn={scrollFn}/>
+            <NavItem
+                key={item.text}
+                text={item.text}
+                bold={item.bold}
+                href={item.href}
+                invert={invert}
+                scrollFn={scrollFn}
+            />
         ))}
       </SNavMenuList>
     </nav>

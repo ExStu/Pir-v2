@@ -3,31 +3,41 @@ import {SPast, SPastImg} from "./styled";
 import Carousel from "@Components/UI/Carousel";
 import {SwiperSlide} from "swiper/react";
 import Typography from "@Components/UI/Typography";
-// <img src="/src/assets/images/past/kaliningrad/k-past-1.webp" alt="123"/>
+import {useMediaQuery, useTheme} from "@mui/material";
 
-const Past: FC = () => (
-    <SPast>
-      <Typography
-          textTransform="uppercase"
-          variant="h2"
-          textAlign="center"
-          marginBottom={4}
-      >
-        Как это было
-      </Typography>
-      <Carousel slidesPerView={3} space={32} centeredSlides className="swiper-past">
-        {
-          Array.from(
-              { length: 26 },
-              (_, i) => (
-                  <SwiperSlide key={`past-${i}`}>
-                    <SPastImg src={`/src/assets/images/past/kaliningrad/k-past-${i + 1}.webp`} alt="Фотография как это было"/>
-                  </SwiperSlide>
-              )
-          )
-        }
-      </Carousel>
-    </SPast>
-)
+interface IPast {
+  place: string
+  length: number
+}
+
+const Past: FC<IPast> = ({place, length}) => {
+  const {breakpoints} = useTheme()
+  const isTablet = useMediaQuery(breakpoints.up("md"))
+  const isMobile = useMediaQuery(breakpoints.down("sm"))
+  return (
+      <SPast>
+        <Typography
+            textTransform="uppercase"
+            variant="h2"
+            textAlign="center"
+            marginBottom={4}
+        >
+          Как это было
+        </Typography>
+        <Carousel slidesPerView={isMobile ? 1 :!isTablet ? 1.5 : 2.5} space={isMobile ? 16 : 32} centeredSlides={!isMobile} className="swiper-past">
+          {
+            Array.from(
+                { length: length },
+                (_, i) => (
+                    <SwiperSlide key={`past-${i}`}>
+                      <SPastImg src={`/src/assets/images/past/${place}/past-${i + 1}.webp`} alt="Фотография как это было"/>
+                    </SwiperSlide>
+                )
+            )
+          }
+        </Carousel>
+      </SPast>
+  )
+}
 
 export default Past;

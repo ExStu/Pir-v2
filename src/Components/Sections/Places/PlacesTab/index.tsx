@@ -7,20 +7,21 @@ import {
   SPlacesItemTitle
 } from "@Components/Sections/Places/PlacesTab/styled.ts";
 import Typography from "@Components/UI/Typography";
-import {useTheme} from "@mui/material";
+import {useMediaQuery, useTheme} from "@mui/material";
 import Star from "@shared/UI/Icons/Star";
 import {SNavItemLinkWrap} from "@shared/UI/NavItemLinkWrap/styled.ts";
 import Link from "@Components/UI/Link";
 import ArrowLink from "@shared/UI/Icons/ArrowLink";
 
 const PlacesTab: FC<IPlacesItem> = ({img, title, rating, href}) => {
-  const {palette} = useTheme()
+  const {palette, breakpoints} = useTheme()
+  const isTablet = useMediaQuery(breakpoints.down("lg"))
 
   return (
       <SPlacesItem>
         <SPlacesItemImg src={img} alt={title}/>
         <SPlacesItemTitle hasLink={!!href}>
-          <Typography variant="h5" color={palette.main.white} textTransform="uppercase">{title}</Typography>
+          <Typography className="places-item__title" variant="h5" color={!isTablet ? palette.main.white : palette.main.primary} textTransform="uppercase">{title}</Typography>
         </SPlacesItemTitle>
         {href && (
             <SPlacesItemLinkWrap>

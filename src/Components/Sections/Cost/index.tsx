@@ -25,7 +25,7 @@ const Cost: FC<ICost> = ({price, desc, href}) => (
             ))}
           </SCostCardDescList>
         </SCostCardDesc>
-        <SCostCardLink variant="t2" href={href}>Купить билет</SCostCardLink>
+        <SCostCardLink variant="t2" href={href} target="_blank">Купить билет</SCostCardLink>
       </SCostCard>
     </SCost>
 )

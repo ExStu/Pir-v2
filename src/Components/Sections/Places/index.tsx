@@ -9,10 +9,13 @@ import Carousel from "@Components/UI/Carousel";
 import {SwiperSlide} from "swiper/react";
 import {motion} from "framer-motion"
 import {placesItemAnimation, tabContentAnimation} from "@Components/Sections/Places/animations.ts";
+import {useMediaQuery, useTheme} from "@mui/material";
 
 const Places: FC<IPlaces> = ({items}) => {
 
   const [useTab, setTab] = useState("hotels")
+  const {breakpoints} = useTheme()
+  const isTablet = useMediaQuery(breakpoints.down("md"))
 
   return (
       <SPlaces>
@@ -35,7 +38,7 @@ const Places: FC<IPlaces> = ({items}) => {
               initial="hidden"
               animate="visible"
           >
-            <Carousel slidesPerView={3} space={20} className="swiper-places-hotels">
+            <Carousel slidesPerView={isTablet ? 2 : 3} space={20} className="swiper-places-hotels">
               {items.map((item) => (
                   item.category === "hotels" && (
                       <SwiperSlide key={item.id}>
@@ -61,7 +64,7 @@ const Places: FC<IPlaces> = ({items}) => {
               initial="hidden"
               animate="visible"
           >
-            <Carousel slidesPerView={3} space={20} className="swiper-places-restaurants">
+            <Carousel slidesPerView={isTablet ? 2 : 3} space={20} className="swiper-places-restaurants">
               {items.map((item) => (
                   item.category === "restaurants" && (
                       <SwiperSlide key={item.id}>
@@ -87,7 +90,7 @@ const Places: FC<IPlaces> = ({items}) => {
               initial="hidden"
               animate="visible"
           >
-            <Carousel slidesPerView={3} space={20} className="swiper-places-other">
+            <Carousel slidesPerView={isTablet ? 2 : 3} space={20} className="swiper-places-other">
               {items.map((item) => (
                   item.category === "other" && (
                       <SwiperSlide key={item.id}>

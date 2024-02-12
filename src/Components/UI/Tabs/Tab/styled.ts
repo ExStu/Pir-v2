@@ -1,7 +1,8 @@
 import Tab, { tabClasses } from "@mui/material/Tab";
 import {styled} from "@mui/material/styles";
-export const STab = styled(Tab)(({ theme: { palette, typography } }) => ({
-  padding: "0 15px",
+import mq from "@shared/themes/breakpoints.ts";
+export const STab = styled(Tab)(({ theme: { palette, typography } }) => mq({
+  padding: ["0 12px", "0 12px", "0 15px"],
   fontSize: typography.t2.fontSize,
   lineHeight: typography.t2.lineHeight,
   minWidth: "fit-content",

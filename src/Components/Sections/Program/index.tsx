@@ -8,8 +8,11 @@ import {CustomTabPanel} from "@Components/UI/TabsCustom/CustomTabPanel.tsx";
 import ProgramItem from "@Components/Sections/Program/ProgramItem";
 import {AnimatePresence} from "framer-motion";
 import {tabContentAnimation} from "./animations";
+import {useMediaQuery, useTheme} from "@mui/material";
 
 const Program = forwardRef<HTMLElement, IProgram>(({items}, ref) => {
+  const {breakpoints} = useTheme()
+  const isMobile = useMediaQuery(breakpoints.down("sm"));
   const [useTab, setTab] = useState(0)
   const handleChangeTab = (_event: SyntheticEvent, newValue: number) => {
     setTab(newValue);
@@ -26,10 +29,12 @@ const Program = forwardRef<HTMLElement, IProgram>(({items}, ref) => {
           Программа Каникул
         </Typography>
         <SProgramTabsWrap>
-          <Typography variant="h3" textTransform="uppercase" marginRight="auto">Расписание</Typography>
-          <Tabs value={useTab} onChange={handleChangeTab}>
+          {/*<Typography textAlign="center" variant="h3" textTransform="uppercase" marginRight="auto">Расписание</Typography>*/}
+          <Tabs variant="scrollable"
+                scrollButtons={isMobile}
+                allowScrollButtonsMobile={isMobile} value={useTab} onChange={handleChangeTab}>
             {items.map((item, index) => (
-                <Tab key={item.date} label={item.date} value={index}/>
+                <Tab wrapped key={item.date} label={item.date} value={index}/>
             ))}
           </Tabs>
         </SProgramTabsWrap>

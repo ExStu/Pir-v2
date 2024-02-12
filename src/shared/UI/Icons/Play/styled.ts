@@ -2,6 +2,7 @@
 
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
+import mq from "@shared/themes/breakpoints.ts";
 
 const pulseAnimate = keyframes`
     100% {
@@ -10,10 +11,10 @@ const pulseAnimate = keyframes`
     }
 `;
 
-export const SPlay = styled("div")(({ theme: { palette } }) => ({
+export const SPlay = styled("div")(({ theme: { palette } }) => mq({
 
   position: "relative",
-  backgroundColor: palette.main.white,
+  backgroundColor: [palette.main.primary, palette.main.primary, palette.main.white],
   width: "28px",
   height: "28px",
   borderRadius: "50%",
@@ -26,7 +27,11 @@ export const SPlay = styled("div")(({ theme: { palette } }) => ({
     top: "50%",
     left: "55%",
     transform: "translate(-50%, -50%)",
-    zIndex: 2
+    zIndex: 2,
+
+    "& path": {
+      fill: [palette.main.white, palette.main.white, palette.main.primary]
+    }
   },
 
   "&:before, &:after": {

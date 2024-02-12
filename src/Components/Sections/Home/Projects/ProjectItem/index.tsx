@@ -4,9 +4,6 @@ import {SProjectItem, SProjectItemBtn, STextWrap} from "./styled.ts";
 import Typography from "@Components/UI/Typography";
 import {useTheme} from "@mui/material";
 import {useNavigate} from "react-router-dom";
-// import { Link as RouterLink  } from "react-router-dom";
-// import Link from "@Components/UI/Link";
-
 
 const ProjectItem: FC<IProjectItem> = ({date, title, image, route}) => {
 
@@ -23,9 +20,9 @@ const ProjectItem: FC<IProjectItem> = ({date, title, image, route}) => {
           {title}
         </Typography>
       </STextWrap>
-      <SProjectItemBtn onClick={() => navigate(route)} variant="outlined" size="large">
+      <SProjectItemBtn disabled={!route} onClick={route ? () => navigate(route) : () => {}} variant="outlined" size="large">
         <Typography variant="t2" color={palette.main.primary}>
-          Подробнее
+          {route ? "Подробнее" : "Скоро"}
         </Typography>
       </SProjectItemBtn>
     </SProjectItem>

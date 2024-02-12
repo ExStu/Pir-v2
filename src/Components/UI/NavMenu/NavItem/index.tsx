@@ -12,6 +12,8 @@ const NavItem: FC<INavItem> = ({text, bold, href, invert, scrollFn}) => {
     <SNavItem>
       <SNavItemLinkWrap color={invert ? palette.main.white : ""}>
         <Link
+            className="nav-menu__link"
+            sx={{whiteSpace: "nowrap"}}
             component={refHash ? "button" : "a"}
             href={!refHash ? href : undefined}
             variant={bold ? "t4" : "t5"}

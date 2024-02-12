@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import {createTheme, Theme} from "@mui/material/styles";
 import colors from "./colors";
 import components from "./components";
@@ -9,7 +11,7 @@ const holidays: Theme = createTheme({
       xs: 0,
       sm: 640,
       md: 1024,
-      lg: 1200,
+      lg: 1178,
       xl: 1400,
     },
   },

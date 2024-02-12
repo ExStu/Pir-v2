@@ -6,9 +6,6 @@ import holidays from "./shared/themes";
 import {BrowserRouter} from "react-router-dom";
 import "./index.css"
 
-console.log(holidays)
-
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>

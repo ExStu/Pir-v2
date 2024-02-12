@@ -1,18 +1,19 @@
 import {styled} from "@mui/material/styles";
 import Typography from "@Components/UI/Typography";
+import mq from "@shared/themes/breakpoints.ts";
 
-export const SContactSection = styled("section")(() => ({
-  padding: "60px 0"
+export const SContactSection = styled("section")(() => mq({
+  padding: ["20px 0", "40px 0", "60px 0"]
 }))
 
 export const SContactTitle = styled(Typography)(() => ({
   marginBottom: "40px"
 }))
 
-export const SContactWrap = styled("div")(() => ({
+export const SContactWrap = styled("div")(() => mq({
   display: "grid",
   gap: "22px",
-  gridTemplateColumns: "66% 34%",
+  gridTemplateColumns: ["auto", "auto", "66% 34%"],
 }))
 
 export const SContactBlock = styled("div")(() => ({
@@ -21,12 +22,13 @@ export const SContactBlock = styled("div")(() => ({
   gap: "20px",
 }))
 
-export const SContactItemWrap = styled("div")(({theme: {palette}}) => ({
+export const SContactItemWrap = styled("div")(({theme: {palette}}) => mq({
   display: "flex",
-  justifyContent: "space-around",
-  padding: "40px",
-  gap: "60px",
-  borderRadius: "50px",
+  flexDirection: ["column", "row", "row"],
+  justifyContent: ["space-between", "space-between", "space-around"],
+  padding: ["30px", "40px"],
+  gap: ["24px", "60px"],
+  borderRadius: ["24px", "50px"],
   backgroundColor: palette.main.background
 }))
 

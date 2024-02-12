@@ -1,6 +1,9 @@
 import {styled} from "@mui/material/styles";
+import mq from "@shared/themes/breakpoints.ts";
 
-export const SReviews = styled("section")(() => ({
-  paddingTop: "60px",
-  paddingBottom: "105px"
+export const SReviews = styled("section")(() => mq({
+  paddingTop: ["20px", "40px", "60px"],
+  paddingBottom: ["80px", "105px"],
+  paddingRight: ["16px", 0],
+  paddingLeft: ["16px", 0],
 }))

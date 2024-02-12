@@ -1,20 +1,21 @@
 import {styled} from "@mui/material/styles";
+import mq from "@shared/themes/breakpoints.ts";
 
-export const SInvites = styled("section")(() => ({
-  paddingTop: "60px",
-  paddingBottom: "105px"
+export const SInvites = styled("section")(() => mq({
+  paddingTop: ["20px", "40px", "60px"],
+  paddingBottom: ["80px", "105px"],
 }))
 
-export const SInvitesModalContent = styled("div")(() => ({
+export const SInvitesModalContent = styled("div")(() => mq({
   display: "flex",
   flexDirection: "column",
   gap: "16px",
   maxWidth: "300px",
-  paddingBottom: "40px",
+  paddingBottom: ["60px", "40px"],
 }))
 
-export const SInvitesModalVideoWrap = styled("div")(() => ({
-  paddingTop: "20px",
+export const SInvitesModalVideoWrap = styled("div")(() => mq({
+  paddingTop: ["40px", "20px"],
   width: "300px",
   height: "480px",
 

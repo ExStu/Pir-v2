@@ -1,33 +1,57 @@
 import {styled} from "@mui/material/styles";
+import mq from "@shared/themes/breakpoints.ts";
+import Typography from "@Components/UI/Typography";
 
 export const SFooter = styled("footer")(({theme: {palette}}) => ({
   padding: "60px 0",
   backgroundColor: palette.main.primary
 }))
 
-export const SFooterWrap = styled("div")(() => ({
+export const SFooterWrap = styled("div")(() => mq({
   display: "flex",
-  flexDirection: "column",
-  gap: "30px"
-}))
-
-export const SFooterTop = styled("div")(() => ({
-  display: "flex",
+  flexDirection: ["row", "column"],
+  gap: "30px",
   justifyContent: "space-between"
 }))
 
-export const SFooterDown = styled("div")(() => ({
+export const SFooterTop = styled("div")(() => mq({
   display: "flex",
+  flexDirection: ["column", "column", "row"],
   justifyContent: "space-between",
-  alignItems: "flex-end"
+  gap: ["32px", "32px", 0],
+
+  "& img": {
+    width: ["125px", "160px", "auto"],
+    height: ["45px", "55px", "auto"]
+  }
 }))
 
-export const SFooterLogosWrap = styled("div")(() => ({
+export const SFooterDown = styled("div")(() => mq({
+  display: "flex",
+  flexDirection: ["column", "row"],
+  justifyContent: "space-between",
+  alignItems: "flex-end",
+  gap: "36px"
+}))
+
+export const SFooterDownActions = styled("div")(() => mq({
+  display: "flex",
+  flexDirection: ["column", "row"],
+  alignItems: "flex-end",
+  gap: ["32px", "44px"]
+}))
+
+export const SFooterLogosWrap = styled("div")(() => mq({
   display: "flex",
   alignItems: "center",
-  gap: "45px"
+  gap: ["20px", "32px", "45px"],
+
+  "& img": {
+    maxWidth: ["76px", "100%"],
+    maxHeight: ["23px", "100%"]
+  }
 }))
 
-export const SButtonScrollUp = styled("button")(() => ({
-
+export const SFooterCopyright = styled(Typography)(() => mq({
+  maxWidth: ["225px", "288px", "100%"]
 }))

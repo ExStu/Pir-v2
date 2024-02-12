@@ -5,8 +5,12 @@ import Typography from "@Components/UI/Typography";
 import Carousel from "@Components/UI/Carousel";
 import {SwiperSlide} from "swiper/react";
 import SpeakersItem from "@Components/Sections/Speakers/SpeakersItem";
+import {useMediaQuery, useTheme} from "@mui/material";
 
 const Speakers = forwardRef<HTMLElement, ISpeakers>(({items }, ref) => {
+  const {breakpoints} = useTheme()
+  const isTablet = useMediaQuery(breakpoints.down("lg"))
+  const isMobile = useMediaQuery(breakpoints.down("sm"))
   return (
       <SSpeakers id="speakers" ref={ref}>
         <Typography
@@ -17,7 +21,7 @@ const Speakers = forwardRef<HTMLElement, ISpeakers>(({items }, ref) => {
         >
           Спикеры
         </Typography>
-        <Carousel slidesPerView={4} space={32} className="swiper-speakers">
+        <Carousel slidesPerView={isMobile ? 2 : isTablet ? 3 : 4} space={32} className="swiper-speakers">
           {items.map((item) => (
               <SwiperSlide key={item.id}>
                 <SpeakersItem
