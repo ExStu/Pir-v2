@@ -1,5 +1,5 @@
 import batorovaImg from "@assets/images/invites/batorova.webp"
-import batorovaVid from "@assets/videos/batorova.mp4"
+import batorovaVid from "@assets/videos/olga-batorova.mp4"
 
 import merkulovaImg from "@assets/images/invites/merkulova.webp"
 import merkulovaVid from "@assets/videos/merkulova.mp4"
