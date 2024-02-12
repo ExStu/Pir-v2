@@ -58,7 +58,6 @@ const Buryatia: FC = () => {
                 titles={
                   {place: heroData.place, date: heroData.date}
                 }
-                onClick={heroData.onClick}
             />
             <Themes items={themesData}/>
             <Invites items={invitesData}/>
