@@ -5,5 +5,5 @@ export interface IHeroTitles {
 
 export interface IHero {
   titles: IHeroTitles
-  onClick: () => void | null
+  href?: string
 }

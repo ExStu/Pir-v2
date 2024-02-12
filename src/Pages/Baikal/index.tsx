@@ -57,7 +57,7 @@ const Baikal: FC = () => {
                 titles={
                   {place: heroData.place, date: heroData.date}
                 }
-                onClick={heroData.onClick}
+                href={heroData.href}
             />
             <Awaits items={awaitsData}/>
             <Themes items={themesData}/>

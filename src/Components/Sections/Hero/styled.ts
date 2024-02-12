@@ -1,6 +1,6 @@
 import {styled} from "@mui/material/styles";
-import Button from "@Components/UI/Button";
 import mq from "@shared/themes/breakpoints.ts";
+import Link from "@Components/UI/Link";
 
 export const SHeroWrap = styled("section")(() => mq({
   display: "flex",
@@ -20,6 +20,18 @@ export const SHeroTitlesWrap = styled("div")(() => ({
   textAlign: "center"
 }))
 
-export const SHeroBtn = styled(Button)(() => ({
+export const SHeroBtn = styled(Link)(({theme: {palette}}) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   width: "300px",
+  padding: "20px 40px",
+  backgroundColor: palette.main.background,
+  color: palette.main.primary,
+  transition: "background-color .15s ease-in, color .15s ease-in",
+
+  "&:hover": {
+    backgroundColor: palette.main.white,
+    color: palette.main.primary
+  }
 }))
