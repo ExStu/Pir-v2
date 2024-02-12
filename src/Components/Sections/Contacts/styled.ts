@@ -6,8 +6,8 @@ export const SContactSection = styled("section")(() => mq({
   padding: ["20px 0", "40px 0", "60px 0"]
 }))
 
-export const SContactTitle = styled(Typography)(() => ({
-  marginBottom: "40px"
+export const SContactTitle = styled(Typography)(() => mq({
+  marginBottom: ["20px", "40px"]
 }))
 
 export const SContactWrap = styled("div")(() => mq({

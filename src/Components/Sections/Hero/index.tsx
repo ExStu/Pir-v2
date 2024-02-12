@@ -1,7 +1,7 @@
 import {FC} from "react";
 import {useTheme} from "@mui/material";
 import Typography from "@Components/UI/Typography";
-import {SHeroBtn, SHeroTitlesWrap, SHeroWrap} from "./styled";
+import {SHeroLinkBtn, SHeroTitlesWrap, SHeroWrap} from "./styled";
 import {IHero} from "./types";
 
 const Hero: FC<IHero> = ({titles, href}) => {
@@ -14,9 +14,9 @@ const Hero: FC<IHero> = ({titles, href}) => {
           <Typography textTransform="uppercase" variant="h1" color={palette.main.white}>{titles.place}</Typography>
           <Typography textTransform="uppercase" variant="h2" color={palette.main.white}>{titles.date}</Typography>
         </SHeroTitlesWrap>
-        <SHeroBtn sx={{visibility: href ? "visible" : "hidden"}} variant="t2" href={href} target="_blank">
+        <SHeroLinkBtn sx={{visibility: href ? "visible" : "hidden"}} variant="t2" href={href} target="_blank">
             Принять участие
-        </SHeroBtn>
+        </SHeroLinkBtn>
       </SHeroWrap>
   )
 }

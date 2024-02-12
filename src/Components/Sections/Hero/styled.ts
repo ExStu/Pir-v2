@@ -20,7 +20,7 @@ export const SHeroTitlesWrap = styled("div")(() => ({
   textAlign: "center"
 }))
 
-export const SHeroBtn = styled(Link)(({theme: {palette}}) => ({
+export const SHeroLinkBtn = styled(Link)(({theme: {palette}}) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",

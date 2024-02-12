@@ -1,5 +1,5 @@
 import buryatia from "@assets/images/home/project-buryatia.webp";
-import buryatia2 from "@assets/images/home/project-buryatia2.webp";
+import baikal from "@assets/images/home/project-baikal.webp";
 import kaliningrad from "@assets/images/home/project-kaliningrad.webp";
 import altay from "@assets/images/home/project-altay.webp";
 export default [
@@ -7,7 +7,7 @@ export default [
     route: "/baikal",
     date: "22-27 МАРТА 2024",
     title: "Байкал",
-    image: buryatia2
+    image: baikal
   },
   {
     date: "АПРЕЛЬ 2024",

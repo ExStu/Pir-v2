@@ -1,5 +1,5 @@
 import metropol from "@assets/images/partners/metropol.svg"
-import pirHotel from "@assets/logos/pir-hotel-blue.svg"
+import pirHotel from "@assets/images/partners/pirHotel.svg"
 import frontdesk from "@assets/images/partners/frontdesk.svg"
 import hotelierPro from "@assets/images/partners/hotelierPro.svg"
 import aoTourism from "@assets/images/partners/aoTourism.svg"
