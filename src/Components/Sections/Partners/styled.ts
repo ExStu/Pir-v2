@@ -21,6 +21,6 @@ export const SPartnersItem = styled("li")(() => mq({
   justifyContent: "center",
 
   "& img": {
-    maxWidth: ["155px", "unset", "unset"]
+    maxWidth: ["155px", "185px"]
   }
 }))

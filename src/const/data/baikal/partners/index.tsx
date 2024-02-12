@@ -6,6 +6,7 @@ import aoTourism from "@assets/images/partners/aoTourism.svg"
 import proHotel from "@assets/images/partners/proHotel.svg"
 import horecaEstate from "@assets/images/partners/horecaEstate.svg"
 import tohology from "@assets/images/partners/tohology.svg"
+import putnikGroup from "@assets/images/partners/putnik-group.png"
 export default [
   {
     id: 1,
@@ -54,5 +55,11 @@ export default [
     href: "https://www.tohology.com/",
     img: tohology,
     alt: "Партнёр Tohology"
+  },
+  {
+    id: 9,
+    href: "https://putnik.group/",
+    img: putnikGroup,
+    alt: "Партнёр УК Путник групп"
   },
 ]
