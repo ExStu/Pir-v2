@@ -2,7 +2,7 @@ import {chipClasses, ChipProps} from "@mui/material/Chip";
 
 import type { StyledComponent } from "@emotion/styled";
 import {Chip} from "@mui/material";
-import mq from "@shared/themes/breakpoints.ts";
+import mq from "@shared/themes/breakpoints";
 import {styled} from "@mui/material/styles";
 
 export const SChip: StyledComponent<ChipProps> = styled(Chip, {

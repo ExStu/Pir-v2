@@ -1,5 +1,5 @@
 import {FC} from "react";
-import {SPlay} from "@shared/UI/Icons/Play/styled.ts";
+import {SPlay} from "@shared/UI/Icons/Play/styled";
 
 const Play: FC = () => (
     <SPlay>

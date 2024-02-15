@@ -1,5 +1,5 @@
 import {styled} from "@mui/material/styles";
-import mq from "@shared/themes/breakpoints.ts";
+import mq from "@shared/themes/breakpoints";
 
 export const SPlacesItem = styled("div")(() => mq({
   display: "flex",

@@ -1,5 +1,5 @@
 import {styled} from "@mui/material/styles";
-import mq from "@shared/themes/breakpoints.ts";
+import mq from "@shared/themes/breakpoints";
 import Typography from "@Components/UI/Typography";
 
 export const SFooter = styled("footer")(({theme: {palette}}) => ({

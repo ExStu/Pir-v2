@@ -2,7 +2,7 @@
 
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
-import mq from "@shared/themes/breakpoints.ts";
+import mq from "@shared/themes/breakpoints";
 
 const pulseAnimate = keyframes`
     100% {

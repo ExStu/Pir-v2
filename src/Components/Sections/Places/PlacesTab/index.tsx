@@ -5,11 +5,11 @@ import {
   SPlacesItemLinkWrap,
   SPlacesItemRating,
   SPlacesItemTitle
-} from "@Components/Sections/Places/PlacesTab/styled.ts";
+} from "@Components/Sections/Places/PlacesTab/styled";
 import Typography from "@Components/UI/Typography";
 import {useMediaQuery, useTheme} from "@mui/material";
 import Star from "@shared/UI/Icons/Star";
-import {SNavItemLinkWrap} from "@shared/UI/NavItemLinkWrap/styled.ts";
+import {SNavItemLinkWrap} from "@shared/UI/NavItemLinkWrap/styled";
 import Link from "@Components/UI/Link";
 import ArrowLink from "@shared/UI/Icons/ArrowLink";
 

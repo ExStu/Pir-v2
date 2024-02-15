@@ -1,8 +1,8 @@
 import {FC} from "react";
-import {IProjects} from "./types.ts";
-import {SProjectsList, SProjectsSection} from "./styled.ts";
+import {IProjects} from "./types";
+import {SProjectsList, SProjectsSection} from "./styled";
 import ProjectItem from "@Components/Sections/Home/Projects/ProjectItem";
-import {SContactTitle} from "@Components/Sections/Contacts/styled.ts";
+import {SContactTitle} from "@Components/Sections/Contacts/styled";
 import {useTheme} from "@mui/material";
 
 const Projects: FC<IProjects> =  ({items}) => {

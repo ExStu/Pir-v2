@@ -84,9 +84,11 @@ const ProjectItem: FC<IProjectItem> = ({date, title, image, route}) => {
                 )
             )}
           </SProjectItemTitle>
-          <SProjectItemDate className="project-item__date" variant="t2" color={palette.uncategorized.disabled} textTransform="uppercase">
-            {date}
-          </SProjectItemDate>
+          {date && (
+            <SProjectItemDate className="project-item__date" variant="t2" color={palette.uncategorized.disabled} textTransform="uppercase">
+              {date}
+            </SProjectItemDate>
+          )}
         </STextWrap>
         <SProjectItemLinkBtn variant="t2" href={route}>
           {route ? (

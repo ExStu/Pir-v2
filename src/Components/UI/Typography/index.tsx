@@ -1,7 +1,7 @@
 import type { FC } from "react";
 
-import { STypography } from "./styled.ts";
-import type { ITypography } from "./types.ts";
+import { STypography } from "./styled";
+import type { ITypography } from "./types";
 
 const Typography: FC<ITypography> = (props) => <STypography {...props} />;
 

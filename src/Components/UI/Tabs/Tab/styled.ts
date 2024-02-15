@@ -1,6 +1,6 @@
 import Tab, { tabClasses } from "@mui/material/Tab";
 import {styled} from "@mui/material/styles";
-import mq from "@shared/themes/breakpoints.ts";
+import mq from "@shared/themes/breakpoints";
 export const STab = styled(Tab)(({ theme: { palette, typography } }) => mq({
   padding: ["0 12px", "0 12px", "0 15px"],
   fontSize: typography.t2.fontSize,

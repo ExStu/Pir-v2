@@ -1,7 +1,7 @@
 import {FC} from "react";
-import {INavMenu} from "./types.ts";
+import {INavMenu} from "./types";
 import NavItem from "@Components/UI/NavMenu/NavItem";
-import {SNavMenuList} from "@Components/UI/NavMenu/styled.ts";
+import {SNavMenuList} from "@Components/UI/NavMenu/styled";
 
 const NavMenu: FC<INavMenu> = ({items, invert, scrollFn}) => {
 

@@ -1,6 +1,6 @@
 import {FC} from "react";
-import {SAwaitsItemImg, SAwaitsItemWrap} from "@Components/Sections/Awaits/AwaitsItem/styled.ts";
-import {IAwaitsItem} from "@Components/Sections/Awaits/types.ts";
+import {SAwaitsItemImg, SAwaitsItemWrap} from "@Components/Sections/Awaits/AwaitsItem/styled";
+import {IAwaitsItem} from "@Components/Sections/Awaits/types";
 import Typography from "@Components/UI/Typography";
 import {useTheme} from "@mui/material";
 

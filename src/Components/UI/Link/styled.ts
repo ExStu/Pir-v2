@@ -5,7 +5,7 @@ import Link from "@mui/material/Link";
 import {LinkProps} from "@mui/material";
 
 import type { StyledComponent } from "@emotion/styled";
-import mq from "@shared/themes/breakpoints.ts";
+import mq from "@shared/themes/breakpoints";
 
 export const SLink: StyledComponent<LinkProps> = styled(Link)(
     ({ theme: {palette, typography }, variant, color }) =>

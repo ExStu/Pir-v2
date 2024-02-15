@@ -1,6 +1,6 @@
 import {FC} from "react";
 import {IReviewItem} from "../types";
-import {SReviewItem, SReviewItemPost} from "@Components/Sections/Reviews/ReviewItem/styled.ts";
+import {SReviewItem, SReviewItemPost} from "@Components/Sections/Reviews/ReviewItem/styled";
 import Typography from "@Components/UI/Typography";
 import Link from "@Components/UI/Link";
 import {useTheme} from "@mui/material";

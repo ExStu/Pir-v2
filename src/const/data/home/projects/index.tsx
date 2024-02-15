@@ -2,6 +2,7 @@ import buryatia from "@assets/images/home/project-buryatia.webp";
 import baikal from "@assets/images/home/project-baikal.webp";
 import kaliningrad from "@assets/images/home/project-kaliningrad.webp";
 import altay from "@assets/images/home/project-altay.webp";
+import spb from "@assets/images/home/project-spb.webp";
 export default [
   {
     route: "/baikal",
@@ -10,7 +11,11 @@ export default [
     image: baikal
   },
   {
-    date: "АПРЕЛЬ 2024",
+    date: "23-26 Апреля 2024",
+    title: "Санкт-Петербург",
+    image: spb
+  },
+  {
     title: "РЕСПУБЛИКА АЛТАЙ",
     image: altay
   },

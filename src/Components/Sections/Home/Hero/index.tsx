@@ -8,7 +8,7 @@ import {
   SHeroMiddleWrap,
   SHeroSection,
   SHeroLogosWrap, SHeroMainImg
-} from "./styled.ts";
+} from "./styled";
 
 import heroImg from "@assets/images/home/hero.webp"
 import heroMiddle from "@assets/images/home/hero-middle.webp"

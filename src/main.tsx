@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import App from './App'
 import {CssBaseline, ThemeProvider} from "@mui/material";
 import holidays from "./shared/themes";
 import {BrowserRouter} from "react-router-dom";

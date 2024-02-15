@@ -1,7 +1,7 @@
 import {FC} from "react";
 import {useTheme} from "@mui/material";
 import {IThemesItem} from "../types";
-import {SThemesItem} from "@Components/Sections/Themes/ThemesItem/styled.ts";
+import {SThemesItem} from "@Components/Sections/Themes/ThemesItem/styled";
 import Typography from "@Components/UI/Typography";
 
 export const ThemesItem: FC<IThemesItem> = ({desc}) => {

@@ -15,6 +15,12 @@ export default [
     alt: "Партнёр Метрополь экспресс"
   },
   {
+    id: 9,
+    href: "https://putnik.group/",
+    img: putnikGroup,
+    alt: "Партнёр УК Путник групп"
+  },
+  {
     id: 2,
     href: "https://pirexpo.com/themes/hotel",
     img: pirHotel,
@@ -55,11 +61,5 @@ export default [
     href: "https://www.tohology.com/",
     img: tohology,
     alt: "Партнёр Tohology"
-  },
-  {
-    id: 9,
-    href: "https://putnik.group/",
-    img: putnikGroup,
-    alt: "Партнёр УК Путник групп"
   },
 ]

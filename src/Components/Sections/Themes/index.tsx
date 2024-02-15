@@ -1,7 +1,7 @@
 import {FC} from "react";
-import {IThemes} from "@Components/Sections/Themes/types.ts";
+import {IThemes} from "@Components/Sections/Themes/types";
 import {useTheme} from "@mui/material";
-import {SThemes, SThemesList} from "@Components/Sections/Themes/styled.ts";
+import {SThemes, SThemesList} from "@Components/Sections/Themes/styled";
 import ThemesItem from "@Components/Sections/Themes/ThemesItem";
 import Typography from "@Components/UI/Typography";
 

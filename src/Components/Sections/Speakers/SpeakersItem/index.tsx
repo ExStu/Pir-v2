@@ -1,6 +1,6 @@
 import {FC} from "react";
-import {ISpeakersItem} from "../types.ts";
-import {SSpeakersItem, SSpeakersItemImg, SSpeakersPost} from "./styled.ts";
+import {ISpeakersItem} from "../types";
+import {SSpeakersItem, SSpeakersItemImg, SSpeakersPost} from "./styled";
 import Typography from "@Components/UI/Typography";
 
 const SpeakersItem: FC<ISpeakersItem> = ({firstName, lastName, post, img}) => {

@@ -6,7 +6,7 @@ import './styles.css'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { Swiper } from 'swiper/react'
 import { CarouselBtn } from './CarouselBtn'
-import { useCarouselNav } from '@utils/useCarouselNav.ts'
+import { useCarouselNav } from '@utils/useCarouselNav'
 import {SCarousel} from "./styled";
 
 interface ICarousel extends PropsWithChildren<unknown> {

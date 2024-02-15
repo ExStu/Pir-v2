@@ -2,9 +2,9 @@ import { styled } from "@mui/material/styles";
 
 import Typography from "@mui/material/Typography";
 
-import type { ITypography } from "./types.ts";
+import type { ITypography } from "./types";
 import type { StyledComponent } from "@emotion/styled";
-import mq from "@shared/themes/breakpoints.ts";
+import mq from "@shared/themes/breakpoints";
 
 
 // @ts-expect-error STypography problem

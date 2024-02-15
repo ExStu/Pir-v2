@@ -3,12 +3,12 @@ import {IPlaces} from "./types";
 import {SPlaces, SPlacesChipWrap} from "./styled";
 import Typography from "@Components/UI/Typography";
 import Chip from "@Components/UI/Chip";
-import {CustomTabPanel} from "@Components/UI/TabsCustom/CustomTabPanel.tsx";
+import {CustomTabPanel} from "@Components/UI/TabsCustom/CustomTabPanel";
 import PlacesTab from "@Components/Sections/Places/PlacesTab";
 import Carousel from "@Components/UI/Carousel";
 import {SwiperSlide} from "swiper/react";
 import {motion} from "framer-motion"
-import {placesItemAnimation, tabContentAnimation} from "@Components/Sections/Places/animations.ts";
+import {placesItemAnimation, tabContentAnimation} from "@Components/Sections/Places/animations";
 import {useMediaQuery, useTheme} from "@mui/material";
 
 const Places: FC<IPlaces> = ({items}) => {

@@ -1,9 +1,9 @@
 import {FC} from "react";
-import {IAwaits} from "@Components/Sections/Awaits/types.ts";
-import {SAwaits, SAwaitsList} from "@Components/Sections/Awaits/styled.ts";
+import {IAwaits} from "./types";
+import {SAwaits, SAwaitsList} from "./styled";
 import Typography from "@Components/UI/Typography";
 import {useTheme} from "@mui/material";
-import AwaitsItem from "@Components/Sections/Awaits/AwaitsItem";
+import AwaitsItem from "./AwaitsItem";
 
 const Awaits: FC<IAwaits> = ({items}) => {
 

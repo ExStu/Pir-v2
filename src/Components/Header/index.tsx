@@ -5,8 +5,8 @@ import pirExpo from "@assets/logos/pir-expo-red.svg"
 import pirExpoWhite from "@assets/logos/pir-expo-white.svg"
 import pirHotel from "@assets/logos/pir-hotel-blue.svg"
 import pirHotelWhite from "@assets/logos/pir-hotel-white.svg"
-import {SHeader, SHeaderBurgerMenu, SHeaderLogoWrap} from "./styled.ts";
-import {INavItem} from "@Components/UI/NavMenu/types.ts";
+import {SHeader, SHeaderBurgerMenu, SHeaderLogoWrap} from "./styled";
+import {INavItem} from "@Components/UI/NavMenu/types";
 import NavMenu from "@Components/UI/NavMenu";
 import Link from "@Components/UI/Link";
 import {useMediaQuery, useTheme} from "@mui/material";

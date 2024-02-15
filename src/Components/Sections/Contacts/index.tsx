@@ -5,7 +5,7 @@ import {
   SContactSection,
   SContactTitle,
   SContactWrap
-} from "@Components/Sections/Contacts/styled.ts";
+} from "@Components/Sections/Contacts/styled";
 import {useTheme} from "@mui/material";
 import Typography from "@Components/UI/Typography";
 import phoneIcon from "@assets/icons/phone-primary.svg"
@@ -46,17 +46,17 @@ const Contacts: FC = () => {
               </SContactLinkWrap>
             </SContactItem>
             <SContactItem>
-              <Typography variant="t1" color={palette.main.primary}>Иванова Наталья</Typography>
+              <Typography variant="t1" color={palette.main.primary}>Муханова Яна</Typography>
               <SContactLinkWrap>
                 <img src={phoneIcon} alt="Иконка телефона"/>
                 <Link href="tel:+74956379440">
-                  <Typography variant="t3" color={palette.main.primary}>+7 (495) 637-94-40 (#347)</Typography>
+                  <Typography variant="t3" color={palette.main.primary}>+7 (495) 637-94-40 (#354)</Typography>
                 </Link>
               </SContactLinkWrap>
               <SContactLinkWrap>
                 <img src={mailIcon} alt="Иконка почты"/>
-                <Link href="mailto:n.ivanova@pir.ru">
-                  <Typography variant="t3" color={palette.main.primary}>n.ivanova@pir.ru</Typography>
+                <Link href="mailto:m.yana@pir.ru">
+                  <Typography variant="t3" color={palette.main.primary}>m.yana@pir.ru</Typography>
                 </Link>
               </SContactLinkWrap>
             </SContactItem>

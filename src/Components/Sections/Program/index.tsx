@@ -4,7 +4,7 @@ import Typography from "@Components/UI/Typography";
 import {IProgram} from "./types";
 import Tab from "@Components/UI/Tabs/Tab";
 import Tabs from "@Components/UI/Tabs";
-import {CustomTabPanel} from "@Components/UI/TabsCustom/CustomTabPanel.tsx";
+import {CustomTabPanel} from "@Components/UI/TabsCustom/CustomTabPanel";
 import ProgramItem from "@Components/Sections/Program/ProgramItem";
 import {AnimatePresence} from "framer-motion";
 import {tabContentAnimation} from "./animations";

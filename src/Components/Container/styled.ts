@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import mq from "@shared/themes/breakpoints.ts";
+import mq from "@shared/themes/breakpoints";
 
 export const SContainer = styled("div")(() => mq({
   maxWidth: "1298px",

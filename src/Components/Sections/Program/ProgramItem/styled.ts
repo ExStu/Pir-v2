@@ -1,6 +1,6 @@
 import {styled} from "@mui/material/styles";
 import {motion} from "framer-motion";
-import mq from "@shared/themes/breakpoints.ts";
+import mq from "@shared/themes/breakpoints";
 
 export const SProgramItem = styled(motion.li)(({theme: {palette}}) => mq({
   display: "flex",

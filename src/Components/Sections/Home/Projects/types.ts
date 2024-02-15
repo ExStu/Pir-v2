@@ -1,6 +1,6 @@
 export interface IProjectItem {
   route?: string
-  date: string
+  date?: string
   title: string
   image: string
 }

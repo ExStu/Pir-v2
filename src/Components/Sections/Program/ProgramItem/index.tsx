@@ -1,6 +1,6 @@
 import {FC} from "react";
 import {IProgramItem} from "../types";
-import {SProgramItem, SProgramItemTime} from "@Components/Sections/Program/ProgramItem/styled.ts";
+import {SProgramItem, SProgramItemTime} from "@Components/Sections/Program/ProgramItem/styled";
 import Typography from "@Components/UI/Typography";
 import {programItemAnimation} from "../animations";
 

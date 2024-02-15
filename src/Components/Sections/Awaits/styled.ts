@@ -1,5 +1,5 @@
 import {styled} from "@mui/material/styles";
-import mq from "@shared/themes/breakpoints.ts";
+import mq from "@shared/themes/breakpoints";
 
 export const SAwaits = styled("section")(() => mq({
   padding: ["20px 0", "40px 0", "60px 0"]

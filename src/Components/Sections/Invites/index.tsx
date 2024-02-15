@@ -8,7 +8,7 @@ import {
   SInvitesModalContent,
   SInvitesModalTabImg,
   SInvitesModalVideoWrap
-} from "@Components/Sections/Invites/styled.ts";
+} from "@Components/Sections/Invites/styled";
 import Typography from "@Components/UI/Typography";
 import {useMediaQuery, useTheme} from "@mui/material";
 import Modal, {ModalBox} from "@Components/UI/Modal";

@@ -1,6 +1,6 @@
 import {styled} from "@mui/material/styles";
 import {Box, boxClasses} from "@mui/material";
-import mq from "@shared/themes/breakpoints.ts";
+import mq from "@shared/themes/breakpoints";
 export const SInvitesItem = styled("div")(({theme: {palette}}) => mq({
   display: "flex",
   flexDirection: "column",

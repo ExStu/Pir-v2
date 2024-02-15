@@ -16,8 +16,8 @@ import {useMediaQuery, useTheme} from "@mui/material";
 import ArrowUp from "@shared/UI/Icons/ArrowUp";
 import IconButton from "@Components/UI/Button/IconButton";
 import Link from "@Components/UI/Link";
-import {scrollToTop} from "@utils/scrollToTop.ts";
-import {INavItem} from "@Components/UI/NavMenu/types.ts";
+import {scrollToTop} from "@utils/scrollToTop";
+import {INavItem} from "@Components/UI/NavMenu/types";
 
 interface IFooter {
   navItems: INavItem[]

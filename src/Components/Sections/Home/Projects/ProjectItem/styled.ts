@@ -1,4 +1,4 @@
-import mq from "@shared/themes/breakpoints.ts";
+import mq from "@shared/themes/breakpoints";
 import Link from "@Components/UI/Link";
 import {styled} from "@mui/material/styles";
 import Typography from "@Components/UI/Typography";

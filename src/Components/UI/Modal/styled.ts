@@ -1,5 +1,5 @@
 import Modal, { modalClasses } from "@mui/material/Modal";
-import mq from "@shared/themes/breakpoints.ts";
+import mq from "@shared/themes/breakpoints";
 import {styled} from "@mui/material/styles";
 
 export const ModalCustom = styled(Modal)(

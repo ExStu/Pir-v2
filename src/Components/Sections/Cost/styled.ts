@@ -1,6 +1,6 @@
 import {styled} from "@mui/material/styles";
 import Link from "@Components/UI/Link";
-import mq from "@shared/themes/breakpoints.ts";
+import mq from "@shared/themes/breakpoints";
 
 export const SCost = styled("section")(() => mq({
     padding: ["40px 0", "40px 0", "60px 0"]
