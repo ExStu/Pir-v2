@@ -1,5 +1,5 @@
 import {forwardRef, SyntheticEvent, useState} from "react";
-import {SProgram, SProgramList, SProgramTabsWrap} from "./styled";
+import {SProgram, SProgramDayTheme, SProgramList, SProgramTabsWrap} from "./styled";
 import Typography from "@Components/UI/Typography";
 import {IProgram} from "./types";
 import Tab from "@Components/UI/Tabs/Tab";
@@ -29,7 +29,6 @@ const Program = forwardRef<HTMLElement, IProgram>(({items}, ref) => {
           Программа Каникул
         </Typography>
         <SProgramTabsWrap>
-          {/*<Typography textAlign="center" variant="h3" textTransform="uppercase" marginRight="auto">Расписание</Typography>*/}
           <Tabs variant="scrollable"
                 scrollButtons={isMobile}
                 allowScrollButtonsMobile={isMobile} value={useTab} onChange={handleChangeTab}>
@@ -41,6 +40,11 @@ const Program = forwardRef<HTMLElement, IProgram>(({items}, ref) => {
         {items.map((item, index) => (
             <CustomTabPanel key={item.date} index={useTab} value={index}>
               <AnimatePresence mode="wait" key={item.date}>
+                {item.dayTheme && (
+                  <SProgramDayTheme>
+                    <Typography variant="t6">{`Тема дня: ${item.dayTheme}`}</Typography>
+                  </SProgramDayTheme>
+                )}
                 <SProgramList
                     variants={tabContentAnimation}
                     initial="hidden"

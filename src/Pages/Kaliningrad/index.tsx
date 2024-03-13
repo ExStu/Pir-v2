@@ -10,6 +10,7 @@ import partnersData from "@const/data/kaliningrad/partners"
 import placesData from "@const/data/kaliningrad/places"
 import speakersData from "@const/data/kaliningrad/speakers"
 import reviewsData from "@const/data/kaliningrad/reviews"
+import pastData from "@const/data/kaliningrad/past"
 
 import Hero from "@Components/Sections/Hero";
 import Container from "@Components/Container";
@@ -66,7 +67,7 @@ const Kaliningrad: FC = () => {
             <Speakers items={speakersData} ref={speakersRef}/>
             <Partners items={partnersData}/>
           </Container>
-          <Past length={26} place="kaliningrad"/>
+          <Past list={pastData}/>
           <Reviews items={reviewsData}/>
           <Container>
             <Contacts/>

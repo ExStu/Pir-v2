@@ -19,7 +19,7 @@ const Projects: FC<IProjects> =  ({items}) => {
       </SContactTitle>
       <SProjectsList>
         {items.map((item) => (
-            <ProjectItem key={item.date} route={item.route} date={item.date} title={item.title} image={item.image}/>
+            <ProjectItem key={item.title} route={item.route} date={item.date} title={item.title} image={item.image}/>
         ))}
       </SProjectsList>
     </SProjectsSection>

@@ -69,8 +69,8 @@ export default {
     },
     t6: {
       fontStyle: "normal",
-      fontWeight: "400",
-      fontSize: "14px",
+      fontWeight: "700",
+      fontSize: ["18px", "24px"],
       lineHeight: "117%",
     },
     t7: {

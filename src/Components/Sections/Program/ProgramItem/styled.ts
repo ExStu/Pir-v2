@@ -5,7 +5,7 @@ import mq from "@shared/themes/breakpoints";
 export const SProgramItem = styled(motion.li)(({theme: {palette}}) => mq({
   display: "flex",
   flexDirection: ["column", "row"],
-  alignItems: ["flex-start", "center"],
+  alignItems: "flex-start",
   gap: ["12px", 0],
   padding: ["16px 0", "32px 0"],
   borderBottom: `1px solid ${palette.main.primaryLight}`

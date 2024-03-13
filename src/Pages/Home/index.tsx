@@ -12,16 +12,15 @@ const Home: FC = () => {
   return (
     <>
       <Header scrollFn={() => {}} navItems={homeNavData}/>
-        <main>
-          <Container>
-            <HomeHero/>
-            <Projects items={homeProjects}/>
-            <Contacts/>
-          </Container>
-        </main>
+      <main>
+        <Container>
+          <HomeHero/>
+          <Projects items={homeProjects}/>
+          <Contacts/>
+        </Container>
+      </main>
       <Footer navItems={homeNavData}/>
     </>
-
   )
 }
 

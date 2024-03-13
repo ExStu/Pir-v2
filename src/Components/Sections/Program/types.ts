@@ -1,11 +1,13 @@
+import {ReactNode} from "react";
+
 export interface IProgramItem {
   time: string
-  program: string
-  inView?: boolean
+  program: string | ReactNode
 }
 
 export interface IProgramTabs {
   date: string
+  dayTheme?: string
   tabContent: IProgramItem[]
 }
 

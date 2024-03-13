@@ -16,6 +16,11 @@ export const SProgramTabsWrap = styled("div")(({theme: {palette}}) => ({
   borderBottom: `1px solid ${palette.main.primaryLight}`
 }))
 
+export const SProgramDayTheme = styled("div")(({theme: {palette}}) => ({
+  padding: "20px 0",
+  borderBottom: `1px solid ${palette.main.primaryLight}`
+}))
+
 export const SProgramList = styled(motion.ul)(() => ({
   listStyle: "none",
   padding: 0,

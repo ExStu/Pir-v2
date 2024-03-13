@@ -10,8 +10,8 @@ export default [
     bold: false
   },
   {
-    text: "Спикеры",
-    href: "#speakers",
+    text: "Эксперты",
+    href: "#experts",
     bold: false
   },
   {

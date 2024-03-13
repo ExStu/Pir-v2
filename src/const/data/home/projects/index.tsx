@@ -11,6 +11,7 @@ export default [
     image: baikal
   },
   {
+    route: "/sankt-peterburg",
     date: "23-26 Апреля 2024",
     title: "Санкт-Петербург",
     image: spb

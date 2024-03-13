@@ -10,6 +10,7 @@ import partnersData from "@const/data/buryatia/partners"
 import placesData from "@const/data/buryatia/places"
 import speakersData from "@const/data/buryatia/speakers"
 import reviewsData from "@const/data/buryatia/reviews"
+import pastData from "@const/data/buryatia/past"
 
 import Container from "@Components/Container";
 import Header from "@Components/Header";
@@ -66,7 +67,7 @@ const Buryatia: FC = () => {
             <Speakers items={speakersData} ref={speakersRef}/>
             <Partners items={partnersData}/>
           </Container>
-          <Past length={28} place="buryatia"/>
+          <Past list={pastData}/>
           <Reviews items={reviewsData}/>
           <Container>
             <Contacts/>

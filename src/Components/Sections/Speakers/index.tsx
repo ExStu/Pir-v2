@@ -12,14 +12,14 @@ const Speakers = forwardRef<HTMLElement, ISpeakers>(({items }, ref) => {
   const isTablet = useMediaQuery(breakpoints.down("lg"))
   const isMobile = useMediaQuery(breakpoints.down("sm"))
   return (
-      <SSpeakers id="speakers" ref={ref}>
+      <SSpeakers id="experts" ref={ref}>
         <Typography
             variant="h2"
             marginBottom={5}
             textAlign="center"
             textTransform="uppercase"
         >
-          Спикеры
+          Эксперты
         </Typography>
         <Carousel slidesPerView={isMobile ? 2 : isTablet ? 3 : 4} space={32} className="swiper-speakers">
           {items.map((item) => (
